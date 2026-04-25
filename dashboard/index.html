@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Movilidad y sostenibilidad en Barcelona</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f6fa;color:#2c3e50}
+  header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);color:#fff;
+         padding:2rem 2.5rem;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  header h1{font-size:1.6rem;margin-bottom:.3rem}
+  header p{opacity:.8;font-size:.9rem}
+  .tab-bar{display:flex;background:#fff;border-bottom:2px solid #e0e0e0;
+           padding:0 2rem;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .tab-btn{padding:1rem 1.4rem;border:none;background:none;cursor:pointer;
+           font-size:.95rem;color:#555;border-bottom:3px solid transparent;
+           transition:all .2s;font-weight:500}
+  .tab-btn:hover{color:#0f3460;background:#f0f4ff}
+  .tab-btn.active{color:#0f3460;border-bottom-color:#0f3460;font-weight:700}
+  .tab-content{display:none;padding:2rem 2.5rem}
+  .tab-content.active{display:block}
+  .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.2rem;margin-bottom:2rem}
+  .kpi{background:#fff;border-radius:12px;padding:1.4rem 1.2rem;text-align:center;
+       box-shadow:0 2px 8px rgba(0,0,0,.07);border-top:4px solid #0f3460}
+  .kpi .valor{font-size:2rem;font-weight:700;color:#0f3460}
+  .kpi .label{font-size:.8rem;color:#777;margin-top:.3rem}
+  .img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:1.5rem;margin-top:1.5rem}
+  .img-card{background:#fff;border-radius:12px;padding:1rem;
+            box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  .img-card img{width:100%;border-radius:8px}
+  .img-card p{font-size:.82rem;color:#555;margin-top:.5rem;text-align:center}
+  .map-selector{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.2rem}
+  .map-btn{padding:.55rem 1.1rem;border:2px solid #0f3460;border-radius:20px;
+           background:#fff;cursor:pointer;font-size:.88rem;color:#0f3460;
+           font-weight:500;transition:all .2s}
+  .map-btn:hover,.map-btn.active{background:#0f3460;color:#fff}
+  .map-frame{display:none;border-radius:12px;overflow:hidden;
+             box-shadow:0 3px 12px rgba(0,0,0,.12)}
+  .map-frame.active{display:block}
+  .map-frame iframe{width:100%;height:580px;border:none}
+  .data-table{width:100%;border-collapse:collapse;background:#fff;
+              border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  .data-table th{background:#0f3460;color:#fff;padding:.7rem 1rem;
+                 text-align:left;font-size:.85rem}
+  .data-table td{padding:.6rem 1rem;border-bottom:1px solid #f0f0f0;font-size:.85rem}
+  .data-table tr:last-child td{border-bottom:none}
+  .data-table tr:hover td{background:#f0f4ff}
+  #filtro{padding:.5rem 1rem;border:1px solid #ccc;border-radius:8px;
+          margin-bottom:1rem;font-size:.9rem;width:100%;max-width:400px}
+  .about-box{background:#fff;border-radius:12px;padding:1.8rem 2rem;
+             box-shadow:0 2px 8px rgba(0,0,0,.07);line-height:1.7}
+  .about-box h3{color:#0f3460;margin:1.2rem 0 .4rem}
+  .about-box ul{padding-left:1.4rem;color:#444}
+  .section-title{font-size:1.1rem;font-weight:700;color:#0f3460;margin-bottom:1rem}
+  .badge{display:inline-block;background:#e8f0fe;color:#0f3460;border-radius:6px;
+         padding:.2rem .6rem;font-size:.78rem;font-weight:600;margin:.1rem}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Movilidad y sostenibilidad ambiental en Barcelona</h1>
+  <p>Trabajo final &middot; Ciudades Inteligentes &middot; Universidad Carlos III de Madrid &middot; 2026</p>
+  <p style="margin-top:.5rem">
+    <span class="badge">RQ1 Ciudad real</span>
+    <span class="badge">RQ2 Movilidad + Sostenibilidad</span>
+    <span class="badge">RQ3 Dashboard</span>
+    <span class="badge">RQ4 Grafo + Series temporales</span>
+    <span class="badge">RQ5 Mapas geogr&aacute;ficos</span>
+  </p>
+</header>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="showTab('resumen',this)">Resumen</button>
+  <button class="tab-btn" onclick="showTab('mapas',this)">Mapas</button>
+  <button class="tab-btn" onclick="showTab('series',this)">Series temporales</button>
+  <button class="tab-btn" onclick="showTab('barrios',this)">Barrios prioritarios</button>
+  <button class="tab-btn" onclick="showTab('acerca',this)">Acerca de</button>
+</div>
+
+<!-- TAB 1: RESUMEN -->
+<div id="tab-resumen" class="tab-content active">
+  <p class="section-title">Indicadores clave &mdash; Barcelona 2017</p>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="valor">10,339</div><div class="label">Accidentes registrados (2017)</div></div>
+    <div class="kpi"><div class="valor">35.9</div><div class="label">NO&#x2082; medio (&mu;g/m&sup3;) &mdash; Nov 2017</div></div>
+    <div class="kpi"><div class="valor">3,162</div><div class="label">Paradas de bus</div></div>
+    <div class="kpi"><div class="valor">651</div><div class="label">Estaciones metro/FGC/tram</div></div>
+    <div class="kpi"><div class="valor">73</div><div class="label">Barrios analizados</div></div>
+    <div class="kpi"><div class="valor">8</div><div class="label">Barrios prioritarios</div></div>
+  </div>
+  <div class="img-grid">
+    <div class="img-card"><img src="img/fig_hora_accidentes.png"/><p>Accidentes por hora del d&iacute;a</p></div>
+    <div class="img-card"><img src="img/fig_hora_no2.png"/><p>Perfil horario de NO&#x2082;</p></div>
+    <div class="img-card"><img src="img/fig_top_distritos.png"/><p>Top 10 distritos con m&aacute;s accidentes</p></div>
+    <div class="img-card"><img src="img/fig_correlacion.png"/><p>Correlaci&oacute;n movilidad &harr; calidad del aire</p></div>
+  </div>
+</div>
+
+<!-- TAB 2: MAPAS -->
+<div id="tab-mapas" class="tab-content">
+  <p class="section-title">Representaci&oacute;n geogr&aacute;fica (RQ5)</p>
+  <div class="map-selector">
+    <button class="map-btn active" onclick="showMap('no2',this)">NO&#x2082; por estaci&oacute;n</button>
+    <button class="map-btn" onclick="showMap('accidentes',this)">Heatmap accidentes</button>
+    <button class="map-btn" onclick="showMap('cobertura',this)">Cobertura bus</button>
+    <button class="map-btn" onclick="showMap('grafo',this)">Red de transporte</button>
+    <button class="map-btn" onclick="showMap('clusters',this)">Clusters de barrios</button>
+  </div>
+  <div id="map-no2"        class="map-frame active"><iframe src="maps/mapa_no2.html"></iframe></div>
+  <div id="map-accidentes" class="map-frame">       <iframe src="maps/mapa_accidentes.html"></iframe></div>
+  <div id="map-cobertura"  class="map-frame">       <iframe src="maps/mapa_cobertura.html"></iframe></div>
+  <div id="map-grafo"      class="map-frame">       <iframe src="maps/mapa_grafo.html"></iframe></div>
+  <div id="map-clusters"   class="map-frame">       <iframe src="maps/mapa_clusters.html"></iframe></div>
+</div>
+
+<!-- TAB 3: SERIES TEMPORALES -->
+<div id="tab-series" class="tab-content">
+  <p class="section-title">Series temporales (RQ4 &mdash; parte A)</p>
+  <div class="img-grid">
+    <div class="img-card"><img src="img/fig_hora_accidentes.png"/><p>Accidentes por hora del d&iacute;a (2017)</p></div>
+    <div class="img-card"><img src="img/fig_hora_no2.png"/><p>Perfil horario de NO&#x2082; &mdash; Noviembre 2017</p></div>
+    <div class="img-card"><img src="img/fig_cruce.png"/><p>Cruce temporal accidentes &harr; NO&#x2082; (Noviembre 2017)</p></div>
+    <div class="img-card"><img src="img/fig_decompose.png"/><p>Descomposici&oacute;n estacional &mdash; accidentes diarios 2017</p></div>
+  </div>
+</div>
+
+<!-- TAB 4: BARRIOS PRIORITARIOS -->
+<div id="tab-barrios" class="tab-content">
+  <p class="section-title">Barrios con triple penalizaci&oacute;n: alto NO&#x2082; + alta siniestralidad + baja cobertura de transporte</p>
+  <input id="filtro" type="text" placeholder="Filtrar por barrio o distrito..." onkeyup="filtrarTabla()"/>
+  <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Barrio</th>
+      <th>Distrito</th>
+      <th>Poblacion</th>
+      <th>NO2 medio ug/m3</th>
+      <th>Acc./1000 hab</th>
+      <th>Bus/1000 hab</th>
+      <th>Estaciones metro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sant Antoni</td>
+      <td>Eixample</td>
+      <td>190918</td>
+      <td>56.17</td>
+      <td>1.22</td>
+      <td>0.29</td>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <td>la Nova Esquerra de l'Eixample</td>
+      <td>Eixample</td>
+      <td>288931</td>
+      <td>56.17</td>
+      <td>1.34</td>
+      <td>0.12</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <td>Hostafrancs</td>
+      <td>Sants-Montjuïc</td>
+      <td>79166</td>
+      <td>56.17</td>
+      <td>1.58</td>
+      <td>0.35</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <td>Sant Gervasi - Galvany</td>
+      <td>Sarrià-Sant Gervasi</td>
+      <td>234415</td>
+      <td>44.64</td>
+      <td>1.64</td>
+      <td>0.32</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>el Clot</td>
+      <td>Sant Martí</td>
+      <td>135074</td>
+      <td>41.49</td>
+      <td>1.12</td>
+      <td>0.21</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <td>Sant Pere, Santa Caterina i la Ribera</td>
+      <td>Ciutat Vella</td>
+      <td>112611</td>
+      <td>40.25</td>
+      <td>1.19</td>
+      <td>0.34</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <td>el Fort Pienc</td>
+      <td>Eixample</td>
+      <td>158444</td>
+      <td>40.25</td>
+      <td>1.75</td>
+      <td>0.25</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td>la Sagrada Família</td>
+      <td>Eixample</td>
+      <td>257063</td>
+      <td>40.25</td>
+      <td>1.47</td>
+      <td>0.19</td>
+      <td>9.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- TAB 5: ACERCA DE -->
+<div id="tab-acerca" class="tab-content">
+  <div class="about-box">
+    <h3>Pregunta de investigaci&oacute;n</h3>
+    <p>&iquest;Existe en Barcelona una relaci&oacute;n entre la cobertura y centralidad de la red de
+    transporte p&uacute;blico, la siniestralidad vial y la calidad del aire a nivel de barrio?</p>
+    <h3>Metodolog&iacute;a</h3>
+    <ul>
+      <li>EDA y tabla maestra a nivel de barrio (pandas).</li>
+      <li>An&aacute;lisis de sostenibilidad: series de NO&#x2082;/PM10/O&#x2083; y mapas folium.</li>
+      <li>An&aacute;lisis de movilidad: heatmap de accidentes, cobertura de bus.</li>
+      <li>Grafo de transporte p&uacute;blico con NetworkX (RQ4-B).</li>
+      <li>Series temporales y descomposici&oacute;n estacional con statsmodels (RQ4-A).</li>
+      <li>Clustering K-means sobre variables integradas.</li>
+    </ul>
+    <h3>Fuentes de datos</h3>
+    <ul>
+      <li>Ajuntament de Barcelona &mdash; Open Data BCN</li>
+      <li>Dataset <em>Barcelona Data Sets</em> (Kaggle)</li>
+      <li>Normativa UE Directiva 2008/50/CE (l&iacute;mites NO&#x2082;)</li>
+      <li>OMS &mdash; Air Quality Guidelines</li>
+    </ul>
+    <h3>Uso de IA generativa</h3>
+    <p>Se ha utilizado <strong>Claude (Anthropic)</strong> como apoyo para estructurar el notebook,
+    depurar fragmentos de c&oacute;digo y revisar redacci&oacute;n. Todo el c&oacute;digo y las conclusiones han sido
+    revisados, ejecutados y validados por los autores.</p>
+    <h3>Herramientas</h3>
+    <ul>
+      <li>Python 3.11 &middot; pandas &middot; numpy &middot; scikit-learn &middot; statsmodels</li>
+      <li>folium &middot; branca &middot; networkx &middot; seaborn &middot; matplotlib</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+function showTab(name, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+function showMap(name, btn) {
+  document.querySelectorAll('.map-frame').forEach(f => f.classList.remove('active'));
+  document.querySelectorAll('.map-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('map-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+function filtrarTabla() {
+  var input = document.getElementById('filtro').value.toLowerCase();
+  var rows = document.querySelectorAll('.data-table tbody tr');
+  rows.forEach(function(row) {
+    row.style.display = row.textContent.toLowerCase().includes(input) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
