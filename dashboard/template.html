@@ -80,6 +80,7 @@
   <button class="tab-btn active" onclick="showTab('resumen',this)">Resumen</button>
   <button class="tab-btn" onclick="showTab('mapas',this)">Mapas</button>
   <button class="tab-btn" onclick="showTab('series',this)">Series temporales</button>
+  <button class="tab-btn" onclick="showTab('modelos',this)">Modelos predictivos</button>
   <button class="tab-btn" onclick="showTab('barrios',this)">Barrios prioritarios</button>
   <button class="tab-btn" onclick="showTab('acerca',this)">Acerca de</button>
 </div>
@@ -109,15 +110,32 @@
   <div class="map-selector">
     <button class="map-btn active" onclick="showMap('no2',this)">NO&#x2082; por estaci&oacute;n</button>
     <button class="map-btn" onclick="showMap('accidentes',this)">Heatmap accidentes</button>
-    <button class="map-btn" onclick="showMap('cobertura',this)">Cobertura bus</button>
+    <button class="map-btn" onclick="showMap('acc_cluster',this)">Cluster accidentes</button>
     <button class="map-btn" onclick="showMap('grafo',this)">Red de transporte</button>
     <button class="map-btn" onclick="showMap('clusters',this)">Clusters de barrios</button>
+    <button class="map-btn" onclick="showMap('riesgo',this)">Riesgo predicho (XGBoost)</button>
   </div>
-  <div id="map-no2"        class="map-frame active"><iframe src="maps/mapa_no2.html"></iframe></div>
-  <div id="map-accidentes" class="map-frame">       <iframe src="maps/mapa_accidentes.html"></iframe></div>
-  <div id="map-cobertura"  class="map-frame">       <iframe src="maps/mapa_cobertura.html"></iframe></div>
-  <div id="map-grafo"      class="map-frame">       <iframe src="maps/mapa_grafo.html"></iframe></div>
-  <div id="map-clusters"   class="map-frame">       <iframe src="maps/mapa_clusters.html"></iframe></div>
+  <div id="map-no2"          class="map-frame active"><iframe src="maps/mapa_no2.html"></iframe></div>
+  <div id="map-accidentes"   class="map-frame">       <iframe src="maps/mapa_accidentes.html"></iframe></div>
+  <div id="map-acc_cluster"  class="map-frame">       <iframe src="maps/mapa_acc_cluster.html"></iframe></div>
+  <div id="map-grafo"        class="map-frame">       <iframe src="maps/mapa_grafo.html"></iframe></div>
+  <div id="map-clusters"     class="map-frame">       <iframe src="maps/mapa_clusters.html"></iframe></div>
+  <div id="map-riesgo"       class="map-frame">       <iframe src="maps/mapa_riesgo_xgboost.html"></iframe></div>
+</div>
+
+<!-- TAB: MODELOS PREDICTIVOS -->
+<div id="tab-modelos" class="tab-content">
+  <p class="section-title">Modelos predictivos</p>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="valor">%%XGB_MAE%%</div><div class="label">XGBoost &mdash; MAE test (accidentes/celda)</div></div>
+    <div class="kpi"><div class="valor">%%XGB_R2%%</div><div class="label">XGBoost &mdash; R&sup2; test</div></div>
+    <div class="kpi"><div class="valor">%%GP_R2%%</div><div class="label">Gaussian Process &mdash; R&sup2; test (NO&#x2082;)</div></div>
+    <div class="kpi"><div class="valor">%%GP_IC%%%</div><div class="label">% puntos dentro de IC &plusmn;1&sigma;</div></div>
+  </div>
+  <div class="img-grid">
+    <div class="img-card"><img src="img/fig_modelos_acc.png"/><p>Comparativa de 7 modelos (MAE en test) &mdash; predicci&oacute;n de accidentes</p></div>
+    <div class="img-card"><img src="img/fig_gp_no2.png"/><p>Gaussian Process &mdash; predicci&oacute;n horaria de NO&#x2082; con IC &plusmn;1&sigma;</p></div>
+  </div>
 </div>
 
 <!-- TAB 3: SERIES TEMPORALES -->
@@ -142,15 +160,16 @@
 <div id="tab-acerca" class="tab-content">
   <div class="about-box">
     <h3>Pregunta de investigaci&oacute;n</h3>
-    <p>&iquest;Existe en Barcelona una relaci&oacute;n entre la cobertura y centralidad de la red de
-    transporte p&uacute;blico, la siniestralidad vial y la calidad del aire a nivel de barrio?</p>
+    <p>&iquest;Cu&aacute;l es el impacto social y ambiental del tr&aacute;fico en Barcelona? &iquest;Existe una relaci&oacute;n entre la siniestralidad vial y la calidad del aire a nivel de barrio? &iquest;Qu&eacute; barrios son prioritarios para una intervenci&oacute;n conjunta?</p>
     <h3>Metodolog&iacute;a</h3>
     <ul>
-      <li>EDA y tabla maestra a nivel de barrio (pandas).</li>
-      <li>An&aacute;lisis de sostenibilidad: series de NO&#x2082;/PM10/O&#x2083; y mapas folium.</li>
-      <li>An&aacute;lisis de movilidad: heatmap de accidentes, cobertura de bus.</li>
-      <li>Grafo de transporte p&uacute;blico con NetworkX (RQ4-B).</li>
+      <li>EDA de contaminaci&oacute;n estilo <em>lab_contaminacion_ambiental</em>: <code>asfreq('1h')</code>, relleno por media, boxplots semanal/mensual con percentil 95, media m&oacute;vil.</li>
+      <li>EDA de accidentes estilo <em>lab_movilidad</em>: <code>info/describe</code>, histogramas temporales, detecci&oacute;n de outliers, heatmap de correlaci&oacute;n.</li>
+      <li>Mapas con <code>folium</code>: <code>MarkerCluster</code> y <code>HeatMap</code> para accidentes y aire (RQ5).</li>
       <li>Series temporales y descomposici&oacute;n estacional con statsmodels (RQ4-A).</li>
+      <li>Grafo de transporte p&uacute;blico con NetworkX y centralidad (RQ4-B).</li>
+      <li>Modelo predictivo de accidentes: comparativa de 7 modelos + XGBoost optimizado con RandomizedSearchCV.</li>
+      <li>Modelo predictivo de NO&#x2082;: Gaussian Process autoregresivo (k=24h) con kernel RBF en GPyTorch.</li>
       <li>Clustering K-means sobre variables integradas.</li>
     </ul>
     <h3>Fuentes de datos</h3>
@@ -167,6 +186,7 @@
     <h3>Herramientas</h3>
     <ul>
       <li>Python 3.11 &middot; pandas &middot; numpy &middot; scikit-learn &middot; statsmodels</li>
+      <li>xgboost &middot; lightgbm &middot; gpytorch &middot; torch</li>
       <li>folium &middot; branca &middot; networkx &middot; seaborn &middot; matplotlib</li>
     </ul>
   </div>
