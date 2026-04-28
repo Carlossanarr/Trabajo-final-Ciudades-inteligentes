@@ -1,0 +1,4 @@
+site_code,site_name,operator,address,grid_ref,latitude,longitude,source_url
+MY1,Westminster - Marylebone Road,,"Cabin opposite Madame Tussauds, Marylebone Road","528125, 182016",51.522540000000,-0.154590000000,https://www.londonair.org.uk/london/asp/publicdetails.asp?MapType=Google&details=location&site=MY1
+KC1,Kensington and Chelsea - North Ken,Kensington and Chelsea,"Sion Manning School, St. Charles' square, North Kensington","524045, 181752",51.521046747604,-0.213492139585,https://www.londonair.org.uk/london/asp/publicdetails.asp?MapType=Google&details=location&site=KC1
+WM6,Westminster - Oxford Street,Westminster,"433 Oxford St, Mayfair","528276, 181065",51.513928740421,-0.152792701882,https://www.londonair.org.uk/london/asp/publicdetails.asp?MapType=Google&details=location&site=WM6

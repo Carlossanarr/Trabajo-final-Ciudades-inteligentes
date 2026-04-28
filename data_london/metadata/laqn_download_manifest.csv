@@ -1,0 +1,4 @@
+site_code,site_name,site_type,file,source_url
+MY1,Westminster - Marylebone Road,Roadside,data_london/raw/laqn/MY1/no2_pm25_o3_2019_2024.csv,https://www.londonair.org.uk/london/asp/downloadsite.asp?site=MY1&species1=NO2m&species2=PM25m&species3=O3m&species4=&species5=&species6=&start=1-jan-2019&end=1-jan-2024&res=6&period=hourly&units=ugm3
+KC1,Kensington and Chelsea - North Kensington,Urban Background,data_london/raw/laqn/KC1/no2_pm25_o3_2019_2024.csv,https://www.londonair.org.uk/london/asp/downloadsite.asp?site=KC1&species1=NO2m&species2=PM25m&species3=O3m&species4=&species5=&species6=&start=1-jan-2019&end=1-jan-2024&res=6&period=hourly&units=ugm3
+WM6,Westminster - Oxford Street,Roadside,data_london/raw/laqn/WM6/no2_pm25_o3_2019_2024.csv,https://www.londonair.org.uk/london/asp/downloadsite.asp?site=WM6&species1=NO2m&species2=PM25m&species3=O3m&species4=&species5=&species6=&start=1-jan-2019&end=1-jan-2024&res=6&period=hourly&units=ugm3
