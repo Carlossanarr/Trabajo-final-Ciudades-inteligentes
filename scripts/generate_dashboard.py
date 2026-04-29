@@ -213,6 +213,7 @@ map_btns = (map_btn('no2',      'NO&#x2082; por estaci&oacute;n', active=True)
           + map_btn('gp',       'NO&#x2082; 2022-2023'))
 
 map_frames = (map_frame('no2',      'mapa_no2.html',      active=True)
+            + map_frame('h3',       'mapa_h3_stops.html')
             + map_frame('tfl',      'mapa_tfl.html')
             + map_frame('grafo',    'mapa_grafo.html')
             + map_frame('conjunto', 'mapa_conjunto.html')
