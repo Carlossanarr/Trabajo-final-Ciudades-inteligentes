@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_082efc0691576ea87c89ef57650dd294 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_082efc0691576ea87c89ef57650dd294" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_082efc0691576ea87c89ef57650dd294 = L.map(
+                "map_082efc0691576ea87c89ef57650dd294",
+                {
+                    center: [51.51, -0.12],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_32e6b5d69216070cd184d0c2b591af44 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_32e6b5d69216070cd184d0c2b591af44.addTo(map_082efc0691576ea87c89ef57650dd294);
+        
+    
+            var marker_4ffafad488c279a4771bf77a7e6290a6 = L.marker(
+                [51.52254, -0.15459],
+                {
+}
+            ).addTo(map_082efc0691576ea87c89ef57650dd294);
+        
+    
+            var icon_e4f3062320c8d1c575a905456901a99d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c74c949cdaa70550dd951b2244fae2eb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2b59bc83c4d841f38e814762ea9d5f68 = $(`<div id="html_2b59bc83c4d841f38e814762ea9d5f68" style="width: 100.0%; height: 100.0%;"><b>MY1</b> &mdash; Westminster – Marylebone Rd<br>Tipo: Roadside<br><b>NO₂ medio: 48.0 μg/m³</b></div>`)[0];
+                popup_c74c949cdaa70550dd951b2244fae2eb.setContent(html_2b59bc83c4d841f38e814762ea9d5f68);
+            
+        
+
+        marker_4ffafad488c279a4771bf77a7e6290a6.bindPopup(popup_c74c949cdaa70550dd951b2244fae2eb)
+        ;
+
+        
+    
+    
+            marker_4ffafad488c279a4771bf77a7e6290a6.bindTooltip(
+                `<div>
+                     MY1 — 48.0 μg/m³
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ffafad488c279a4771bf77a7e6290a6.setIcon(icon_e4f3062320c8d1c575a905456901a99d);
+            
+    
+            var marker_31356f23223de99906ed124be6ac2be8 = L.marker(
+                [51.52105, -0.21349],
+                {
+}
+            ).addTo(map_082efc0691576ea87c89ef57650dd294);
+        
+    
+            var icon_3c51b687e21cc45a819c07e5a45803a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2b76af117f3807fc7018ba3303d992e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_40e81315e049db4f461468f46c75fed3 = $(`<div id="html_40e81315e049db4f461468f46c75fed3" style="width: 100.0%; height: 100.0%;"><b>KC1</b> &mdash; Kensington – North Kensington<br>Tipo: Urban Background<br><b>NO₂ medio: 21.1 μg/m³</b></div>`)[0];
+                popup_d2b76af117f3807fc7018ba3303d992e.setContent(html_40e81315e049db4f461468f46c75fed3);
+            
+        
+
+        marker_31356f23223de99906ed124be6ac2be8.bindPopup(popup_d2b76af117f3807fc7018ba3303d992e)
+        ;
+
+        
+    
+    
+            marker_31356f23223de99906ed124be6ac2be8.bindTooltip(
+                `<div>
+                     KC1 — 21.1 μg/m³
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31356f23223de99906ed124be6ac2be8.setIcon(icon_3c51b687e21cc45a819c07e5a45803a9);
+            
+    
+            var marker_6e54779e028671749b40ce695041da46 = L.marker(
+                [51.51393, -0.15279],
+                {
+}
+            ).addTo(map_082efc0691576ea87c89ef57650dd294);
+        
+    
+            var icon_be736be8ade140d2255d45bab61def31 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77bac19d3ee8f5f3961252379ba1b5d7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e9a056ab49e666b6ac110a4ede8055e3 = $(`<div id="html_e9a056ab49e666b6ac110a4ede8055e3" style="width: 100.0%; height: 100.0%;"><b>WM6</b> &mdash; Westminster – Oxford Street<br>Tipo: Roadside<br><b>NO₂ medio: 40.2 μg/m³</b></div>`)[0];
+                popup_77bac19d3ee8f5f3961252379ba1b5d7.setContent(html_e9a056ab49e666b6ac110a4ede8055e3);
+            
+        
+
+        marker_6e54779e028671749b40ce695041da46.bindPopup(popup_77bac19d3ee8f5f3961252379ba1b5d7)
+        ;
+
+        
+    
+    
+            marker_6e54779e028671749b40ce695041da46.bindTooltip(
+                `<div>
+                     WM6 — 40.2 μg/m³
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6e54779e028671749b40ce695041da46.setIcon(icon_be736be8ade140d2255d45bab61def31);
+            
+    
+            var marker_9d5e173d05ec7364ca039eb51991686b = L.marker(
+                [51.52185, -0.1274],
+                {
+}
+            ).addTo(map_082efc0691576ea87c89ef57650dd294);
+        
+    
+            var icon_9da598e1556e27df05bd575108658aef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ef3106dc24081eabae4253bf50ff769 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2fe82918426007f5776a479014cf3e47 = $(`<div id="html_2fe82918426007f5776a479014cf3e47" style="width: 100.0%; height: 100.0%;"><b>CT3</b> &mdash; Camden – Bloomsbury<br>Tipo: Urban Background<br><b>NO₂ medio: 25.5 μg/m³</b></div>`)[0];
+                popup_3ef3106dc24081eabae4253bf50ff769.setContent(html_2fe82918426007f5776a479014cf3e47);
+            
+        
+
+        marker_9d5e173d05ec7364ca039eb51991686b.bindPopup(popup_3ef3106dc24081eabae4253bf50ff769)
+        ;
+
+        
+    
+    
+            marker_9d5e173d05ec7364ca039eb51991686b.bindTooltip(
+                `<div>
+                     CT3 — 25.5 μg/m³
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9d5e173d05ec7364ca039eb51991686b.setIcon(icon_9da598e1556e27df05bd575108658aef);
+            
+    
+            var marker_42d8d6117cbfe16baf3dc9420ef46754 = L.marker(
+                [51.49386, 0.10612],
+                {
+}
+            ).addTo(map_082efc0691576ea87c89ef57650dd294);
+        
+    
+            var icon_5ebaaad35e0047bd38a1d9bc5f8e4637 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_115488115ec747aa48896282bc063252 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a57471ec380248b758b5e814faaac0a7 = $(`<div id="html_a57471ec380248b758b5e814faaac0a7" style="width: 100.0%; height: 100.0%;"><b>BX1</b> &mdash; Bexley – Belvedere West<br>Tipo: Suburban<br><b>NO₂ medio: 19.6 μg/m³</b></div>`)[0];
+                popup_115488115ec747aa48896282bc063252.setContent(html_a57471ec380248b758b5e814faaac0a7);
+            
+        
+
+        marker_42d8d6117cbfe16baf3dc9420ef46754.bindPopup(popup_115488115ec747aa48896282bc063252)
+        ;
+
+        
+    
+    
+            marker_42d8d6117cbfe16baf3dc9420ef46754.bindTooltip(
+                `<div>
+                     BX1 — 19.6 μg/m³
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_42d8d6117cbfe16baf3dc9420ef46754.setIcon(icon_5ebaaad35e0047bd38a1d9bc5f8e4637);
+            
+</script>
+</html>

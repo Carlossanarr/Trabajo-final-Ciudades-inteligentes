@@ -2,80 +2,146 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Movilidad y sostenibilidad ambiental en Londres</title>
-<style>:root{--p-dark:#0b3b17;--p-green:#1a823b;--l-green:#8cc63f;--a-org:#f58f2a;--a-teal:#1eae98;--bg:#f8faf5;--card:#fff;--t-dark:#2e211a;--t-mut:#6b5c52;--border:#d6d1c4}*{box-sizing:border-box;margin:0;padding:0}body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(rgba(248,250,245,0.35),rgba(248,250,245,0.35)),url("img/London.jpg") no-repeat center center fixed;background-size:cover;color:var(--t-dark);line-height:1.6}header{background: url("img/Cabecera.jpg") no-repeat center center / cover, linear-gradient(rgba(30,174,152,0.35), rgba(30,174,152,0.35));color:#fff;padding:2.5rem 3rem;box-shadow:0 4px 12px rgba(11,59,23,.2);position:relative;overflow:hidden}header::after{content:"";position:absolute;top:0;right:0;bottom:0;width:40%;background:linear-gradient(to left,rgba(245,143,42,.1),transparent);pointer-events:none}header h1{font-size:2rem;margin-bottom:.5rem;font-weight:700;letter-spacing:-.5px}header p{opacity:.9;font-size:1rem;color:#eaf0e6}.tab-bar{display:flex;background:var(--card);border-bottom:1px solid var(--border);padding:0 2.5rem;box-shadow:0 2px 10px rgba(0,0,0,.04);position:sticky;top:0;z-index:100}.tab-btn{padding:1.2rem 1.5rem;border:none;background:none;cursor:pointer;font-size:1rem;color:var(--t-mut);border-bottom:3px solid transparent;transition:all .3s ease;font-weight:500;position:relative}.tab-btn:hover{color:var(--p-green);background:rgba(140,198,63,.1)}.tab-btn.active{color:var(--p-dark);border-bottom-color:var(--p-green);font-weight:600}@keyframes slideUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}.tab-content{display:none;padding:2.5rem 3rem;animation:slideUp .4s ease-out forwards}.tab-content.active{display:block}.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-bottom:2.5rem}.kpi{background:var(--card);border-radius:12px;padding:1.8rem 1.5rem;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.04);border-top:4px solid var(--p-green);transition:transform .3s ease,box-shadow .3s ease;position:relative;overflow:hidden}.kpi::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,rgba(140,198,63,.05) 0%,transparent 50%);opacity:0;transition:opacity .3s}.kpi:hover{transform:translateY(-5px);box-shadow:0 8px 25px rgba(11,59,23,.1)}.kpi:hover::before{opacity:1}.kpi .valor{font-size:2.2rem;font-weight:700;color:var(--p-dark);line-height:1.2}.kpi .label{font-size:.85rem;color:var(--t-mut);margin-top:.6rem;text-transform:uppercase;letter-spacing:.5px;font-weight:600}.img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(450px,1fr));gap:2rem;margin-top:1.5rem}.img-card{background:var(--card);border-radius:12px;padding:1.2rem;box-shadow:0 4px 15px rgba(0,0,0,.04);transition:transform .3s ease}.img-card:hover{transform:scale(1.01)}.img-card img{width:100%;border-radius:8px;display:block}.img-card p{font-size:.9rem;color:var(--t-mut);margin-top:.8rem;text-align:center;font-weight:500}.map-selector{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}.map-btn{padding:.6rem 1.2rem;border:2px solid var(--p-green);border-radius:30px;background:var(--card);cursor:pointer;font-size:.9rem;color:var(--p-green);font-weight:600;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05)}.map-btn:hover{background:rgba(26,130,59,.1);transform:translateY(-2px)}.map-btn.active{background:var(--p-green);color:#fff;box-shadow:0 4px 10px rgba(26,130,59,.3)}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.map-frame{display:none;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.08);background:#fff;border:1px solid #eee}.map-frame.active{display:block;animation:fadeIn .5s ease-in}.map-frame iframe{width:100%;height:600px;border:none;display:block}.data-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.04);margin-top:1rem}.data-table th{background:var(--p-dark);color:#fff;padding:1rem 1.2rem;text-align:left;font-size:.9rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px}.data-table td{padding:.8rem 1.2rem;border-bottom:1px solid var(--border);font-size:.95rem;color:var(--t-dark)}.data-table tr:last-child td{border-bottom:none}.data-table tr{transition:background .2s}.data-table tr:hover td{background:rgba(140,198,63,.08)}#filtro{padding:.8rem 1.2rem;border:1px solid var(--border);border-radius:8px;margin-bottom:1rem;font-size:1rem;width:100%;max-width:400px;transition:all .3s;outline:none;background:var(--card)}#filtro:focus{border-color:var(--p-green);box-shadow:0 0 0 3px rgba(26,130,59,.2)}.section-title{font-size:1.3rem;font-weight:700;color:var(--p-dark);margin-bottom:1.5rem;display:flex;align-items:center;gap:10px}.section-title::before{content:"";display:inline-block;width:6px;height:24px;background:var(--a-org);border-radius:3px}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Movilidad y sostenibilidad en Londres</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f6fa;color:#2c3e50}
+  header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);color:#fff;
+         padding:2rem 2.5rem;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  header h1{font-size:1.6rem;margin-bottom:.3rem}
+  header p{opacity:.9;font-size:.9rem}
+  .tab-bar{display:flex;background:#fff;border-bottom:2px solid #e0e0e0;
+           padding:0 2rem;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .tab-btn{padding:1rem 1.4rem;border:none;background:none;cursor:pointer;
+           font-size:.95rem;color:#555;border-bottom:3px solid transparent;
+           transition:all .2s;font-weight:500}
+  .tab-btn:hover{color:#0f3460;background:#f0f4ff}
+  .tab-btn.active{color:#0f3460;border-bottom-color:#0f3460;font-weight:700}
+  .tab-content{display:none;padding:2rem 2.5rem}
+  .tab-content.active{display:block}
+  .img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:1.5rem;margin-top:1rem}
+  .img-card{background:#fff;border-radius:12px;padding:1rem;
+            box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  .img-card img{width:100%;border-radius:8px}
+  .img-card p{font-size:.82rem;color:#555;margin-top:.5rem;text-align:center}
+  .map-selector{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.2rem}
+  .map-btn{padding:.55rem 1.1rem;border:2px solid #0f3460;border-radius:20px;
+           background:#fff;cursor:pointer;font-size:.88rem;color:#0f3460;
+           font-weight:500;transition:all .2s}
+  .map-btn:hover,.map-btn.active{background:#0f3460;color:#fff}
+  .map-frame{display:none;border-radius:12px;overflow:hidden;
+             box-shadow:0 3px 12px rgba(0,0,0,.12)}
+  .map-frame.active{display:block}
+  .map-frame iframe{width:100%;height:580px;border:none}
+  .data-table{width:100%;border-collapse:collapse;background:#fff;
+              border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-top:1rem}
+  .data-table th{background:#0f3460;color:#fff;padding:.7rem 1rem;
+                 text-align:left;font-size:.85rem}
+  .data-table td{padding:.6rem 1rem;border-bottom:1px solid #f0f0f0;font-size:.85rem}
+  .data-table tr:last-child td{border-bottom:none}
+  .section-title{font-size:1.1rem;font-weight:700;color:#0f3460;margin-bottom:1rem}
+  .pending{background:#fff;border-radius:12px;padding:2rem;text-align:center;color:#999;
+           font-style:italic;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  .badge{display:inline-block;background:#e8f0fe;color:#0f3460;border-radius:6px;
+         padding:.2rem .6rem;font-size:.78rem;font-weight:600;margin:.1rem}
+</style>
 </head>
 <body>
 <header>
-<h1>Movilidad y sostenibilidad ambiental en Londres</h1>
-<p>Trabajo final &middot; Ciudades Inteligentes &middot; UC3M &middot; Mayo 2026</p>
-<p style="margin-top:.35rem;opacity:.95">Emilio Hermosa Schiantarelli (NIA 100451150) &middot; Carlos Sanchez Arroyo (NIA 100451282) &middot; Rodrigo Valderrey Tarrero (NIA 100451271)</p>
+  <h1>Movilidad y sostenibilidad ambiental en Londres</h1>
+  <p>Trabajo final &middot; Ciudades Inteligentes &middot; Universidad Carlos III de Madrid &middot; 2025/2026</p>
+  <p style="margin-top:.35rem">
+    Emilio Hermosa Schiantarelli (100451150) &middot;
+    Carlos Sanchez Arroyo (100451282) &middot;
+    Rodrigo Valderrey Tarrero (100451271)
+  </p>
+  <p style="margin-top:.5rem">
+    <span class="badge">RQ1 Ciudad real</span>
+    <span class="badge">RQ2 Movilidad + Sostenibilidad</span>
+    <span class="badge">RQ3 Dashboard</span>
+    <span class="badge">RQ4 Series temporales + Grafo</span>
+    <span class="badge">RQ5 Mapas geográficos</span>
+  </p>
 </header>
-<div class="tab-bar"><button class="tab-btn active" onclick="showTab('resumen',this)">Resumen</button><button class="tab-btn" onclick="showTab('mapas',this)">Mapas</button><button class="tab-btn" onclick="showTab('series',this)">Series temporales</button><button class="tab-btn" onclick="showTab('modelos',this)">Modelos predictivos</button><button class="tab-btn" onclick="showTab('estaciones',this)">Estaciones LAQN</button></div>
-<div id="tab-resumen" class="tab-content active"><p class="section-title">Indicadores clave &mdash; Red LAQN + TfL Londres 2019-2023</p><div class="kpi-grid"><div class="kpi"><div class="valor">5</div><div class="label">Estaciones LAQN</div></div><div class="kpi"><div class="valor">29.8</div><div class="label">NO&#x2082; medio (&#x3bc;g/m&#xB3;) 2019-2023</div></div><div class="kpi"><div class="valor">4084</div><div class="label">Paradas TfL</div></div><div class="kpi"><div class="valor">5</div><div class="label">A&ntilde;os analizados (2019-2023)</div></div><div class="kpi"><div class="valor">0.187</div><div class="label">GP &mdash; R&#xB2; test (NO&#x2082;)</div></div><div class="kpi"><div class="valor">84.4%</div><div class="label">% puntos dentro IC &plusmn;1&sigma;</div></div></div><div class="img-grid"><div class="img-card"><img src="img/fig_hora_no2.png"/><p>Perfil horario de NO&#x2082; por estaci&oacute;n</p></div><div class="img-card"><img src="img/fig_estacionalidad.png"/><p>Estacionalidad semanal y mensual</p></div><div class="img-card"><img src="img/fig_comparacion.png"/><p>Comparativa anual entre estaciones</p></div><div class="img-card"><img src="img/fig_correlacion.png"/><p>Correlaci&oacute;n movilidad &harr; contaminaci&oacute;n</p></div></div></div>
-<div id="tab-mapas" class="tab-content"><p class="section-title">Representaci&oacute;n geogr&aacute;fica (RQ5)</p><div class="map-selector"><button class="map-btn active" onclick="showMap('no2',this)">NO&#x2082; por estaci&oacute;n</button><button class="map-btn" onclick="showMap('tfl',this)">Densidad TfL</button><button class="map-btn" onclick="showMap('grafo',this)">Red de transporte</button><button class="map-btn" onclick="showMap('conjunto',this)">LAQN + TfL conjunto</button><button class="map-btn" onclick="showMap('clusters',this)">Clusters LAQN</button><button class="map-btn" onclick="showMap('gp',this)">NO&#x2082; 2022-2023</button></div><div id="map-no2" class="map-frame active"><iframe src="maps/mapa_no2.html"></iframe></div><div id="map-h3" class="map-frame"><iframe src="maps/mapa_h3_stops.html"></iframe></div><div id="map-tfl" class="map-frame"><iframe src="maps/mapa_tfl.html"></iframe></div><div id="map-grafo" class="map-frame"><iframe src="maps/mapa_grafo.html"></iframe></div><div id="map-conjunto" class="map-frame"><iframe src="maps/mapa_conjunto.html"></iframe></div><div id="map-clusters" class="map-frame"><iframe src="maps/mapa_clusters.html"></iframe></div><div id="map-gp" class="map-frame"><iframe src="maps/mapa_gp_pred.html"></iframe></div></div>
-<div id="tab-series" class="tab-content"><p class="section-title">Series temporales (RQ4 &mdash; parte A)</p><div class="img-grid"><div class="img-card"><img src="img/fig_hora_no2.png"/><p>Perfil horario de NO&#x2082; (2019-2023)</p></div><div class="img-card"><img src="img/fig_tendencia.png"/><p>Tendencia interanual con media m&oacute;vil anual</p></div><div class="img-card"><img src="img/fig_decompose.png"/><p>Descomposici&oacute;n estacional STL &mdash; KC1</p></div><div class="img-card"><img src="img/fig_estacionalidad.png"/><p>Estacionalidad semanal y mensual NO&#x2082; + O&#x2083;</p></div></div></div>
-<div id="tab-modelos" class="tab-content"><p class="section-title">Modelos predictivos</p><div class="kpi-grid"><div class="kpi"><div class="valor">11.294</div><div class="label">XGBoost &mdash; MAE test (&#x3bc;g/m&#xB3;)</div></div><div class="kpi"><div class="valor">0.1930</div><div class="label">XGBoost &mdash; R&#xB2; test</div></div><div class="kpi"><div class="valor">0.187</div><div class="label">Gaussian Process &mdash; R&#xB2; test</div></div><div class="kpi"><div class="valor">84.4%</div><div class="label">% puntos IC &plusmn;1&sigma;</div></div></div><div class="img-grid"><div class="img-card"><img src="img/fig_modelos.png"/><p>Comparativa de 6 modelos (MAE en test)</p></div><div class="img-card"><img src="img/fig_gp_no2.png"/><p>GP &mdash; predicci&oacute;n semanal NO&#x2082; con IC &plusmn;1&sigma;</p></div><div class="img-card"><img src="img/fig_xgb_no2.png"/><p>XGBoost &mdash; predicho vs real + importancia</p></div></div></div>
-<div id="tab-estaciones" class="tab-content"><p class="section-title">Estaciones LAQN &mdash; NO&#x2082; y cobertura TfL</p><input id="filtro" type="text" placeholder="Filtrar por estaci&oacute;n o tipo..." onkeyup="filtrarTabla()"/><table class="dataframe dataframe data-table">
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="showTab('eda',this)">1. EDA</button>
+  <button class="tab-btn" onclick="showTab('no2',this)">2. Análisis NO₂</button>
+  <button class="tab-btn" onclick="showTab('modelo',this)">3. Modelo predictivo</button>
+  <button class="tab-btn" onclick="showTab('mapas',this)">4. Mapas</button>
+</div>
+<div id="tab-eda" class="tab-content active">
+  <p class="section-title">Análisis Exploratorio de los datos LAQN (NO₂, 2019-2022)</p>
+  
+<div class="img-grid">
+  <div class="img-card"><img src="img/fig_nulos_no2.png"/><p>Calidad de los datos: nulos por estación y año</p></div>
+  <div class="img-card"><img src="img/fig_distribuciones.png"/><p>Distribución de NO₂ por estación con umbral OMS (40 μg/m³)</p></div>
+</div>
+
+</div>
+<div id="tab-no2" class="tab-content">
+  <p class="section-title">Patrones temporales de NO₂ por estación</p>
+  
+<div class="img-grid">
+  <div class="img-card"><img src="img/fig_no2_diario.png"/><p>3.1 — NO₂ medio por hora del día</p></div>
+  <div class="img-card"><img src="img/fig_no2_semanal.png"/><p>3.2 — NO₂ medio por día de la semana</p></div>
+  <div class="img-card"><img src="img/fig_no2_mensual.png"/><p>3.3 — NO₂ medio por mes</p></div>
+  <div class="img-card"><img src="img/fig_no2_anual.png"/><p>3.4 — NO₂ medio anual</p></div>
+</div>
+
+</div>
+<div id="tab-modelo" class="tab-content">
+  <p class="section-title">Predicción de NO₂ — Proceso Gaussiano (gpytorch)</p>
+  
+<div class="img-grid">
+  <div class="img-card">
+    <img src="img/fig_gp_no2.png"/>
+    <p>Predicción GP de NO₂ diario en MY1 con intervalo ±2σ y proyección a 30 días</p>
+  </div>
+</div>
+<table class="data-table">
   <thead>
-    <tr style="text-align: right;">
-      <th>Estación</th>
-      <th>Nombre / Ubicación</th>
-      <th>Tipo</th>
-      <th>NO2 medio (μg/m³)</th>
-      <th>Excede OMS (40)</th>
-      <th>Paradas TfL ≤500m</th>
-      <th>Dist. parada más cercana (m)</th>
-    </tr>
+    <tr><th>Split</th><th>R²</th><th>MAE (μg/m³)</th><th>RMSE (μg/m³)</th></tr>
   </thead>
   <tbody>
-    <tr>
-      <td>MY1</td>
-      <td>Westminster – Marylebone Rd</td>
-      <td>Roadside</td>
-      <td>46.81</td>
-      <td>Sí</td>
-      <td>20</td>
-      <td>111</td>
-    </tr>
-    <tr>
-      <td>WM6</td>
-      <td>Westminster – Oxford Street</td>
-      <td>Roadside</td>
-      <td>38.66</td>
-      <td>No</td>
-      <td>43</td>
-      <td>198</td>
-    </tr>
-    <tr>
-      <td>CT3</td>
-      <td>Camden – Bloomsbury</td>
-      <td>Urban Background</td>
-      <td>24.87</td>
-      <td>No</td>
-      <td>8</td>
-      <td>162</td>
-    </tr>
-    <tr>
-      <td>KC1</td>
-      <td>Kensington – North Kensington</td>
-      <td>Urban Background</td>
-      <td>20.03</td>
-      <td>No</td>
-      <td>6</td>
-      <td>448</td>
-    </tr>
-    <tr>
-      <td>BX1</td>
-      <td>Bexley – Belvedere West</td>
-      <td>Suburban</td>
-      <td>18.83</td>
-      <td>No</td>
-      <td>0</td>
-      <td>1003</td>
-    </tr>
+    <tr><td>Train</td><td>0.456</td><td>11.53</td><td>14.57</td></tr><tr><td>Val</td><td>-0.050</td><td>12.76</td><td>15.44</td></tr><tr><td>Test</td><td>-0.655</td><td>14.54</td><td>18.10</td></tr>
   </tbody>
-</table></div>
-<script>function showTab(n,b){document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(b2=>b2.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active');b.classList.add('active');}function showMap(n,b){document.querySelectorAll('.map-frame').forEach(f=>f.classList.remove('active'));document.querySelectorAll('.map-btn').forEach(b2=>b2.classList.remove('active'));document.getElementById('map-'+n).classList.add('active');b.classList.add('active');}function filtrarTabla(){var inp=document.getElementById('filtro').value.toLowerCase();document.querySelectorAll('.data-table tbody tr').forEach(function(r){r.style.display=r.textContent.toLowerCase().includes(inp)?'':'none';});}</script>
-</body></html>
+</table>
+<p style="margin-top:1rem;color:#555;font-size:.88rem">
+Modelo: <code>ExactGP</code> con kernel <code>ScaleKernel(RBFKernel + PeriodicKernel)</code>
+sobre la serie diaria de MY1, entrenado con Adam (lr=0.05, 200 epochs) y MLL exacto.
+La estandarización se ajusta solo sobre el split de entrenamiento.
+</p>
+
+</div>
+<div id="tab-mapas" class="tab-content">
+  <p class="section-title">Representación geográfica</p>
+  
+<div class="map-selector">
+  <button class="map-btn active" onclick="showMap('estaciones',this)">5.1 Estaciones LAQN</button>
+  <button class="map-btn"        onclick="showMap('cluster',this)">5.2 Cluster paradas</button>
+  <button class="map-btn"        onclick="showMap('h3',this)">5.3 Hexágonos H3</button>
+  <button class="map-btn"        onclick="showMap('grafo',this)">5.4 Grafo + HeatMap</button>
+</div>
+<div id="map-estaciones" class="map-frame active"><iframe src="maps/mapa_estaciones.html"></iframe></div>
+<div id="map-cluster"    class="map-frame"       ><iframe src="maps/mapa_cluster_paradas.html"></iframe></div>
+<div id="map-h3"         class="map-frame"       ><iframe src="maps/mapa_h3.html"></iframe></div>
+<div id="map-grafo"      class="map-frame"       ><iframe src="maps/mapa_grafo.html"></iframe></div>
+
+</div>
+<script>
+function showTab(name, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+function showMap(name, btn) {
+  document.querySelectorAll('.map-frame').forEach(f => f.classList.remove('active'));
+  document.querySelectorAll('.map-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('map-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
