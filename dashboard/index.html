@@ -92,27 +92,7 @@
 </div>
 <div id="tab-modelo" class="tab-content">
   <p class="section-title">Predicción de NO₂ — Proceso Gaussiano (gpytorch)</p>
-  
-<div class="img-grid">
-  <div class="img-card">
-    <img src="img/fig_gp_no2.png"/>
-    <p>Predicción GP de NO₂ diario en MY1 con intervalo ±2σ y proyección a 30 días</p>
-  </div>
-</div>
-<table class="data-table">
-  <thead>
-    <tr><th>Split</th><th>R²</th><th>MAE (μg/m³)</th><th>RMSE (μg/m³)</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Train</td><td>0.456</td><td>11.53</td><td>14.57</td></tr><tr><td>Val</td><td>-0.050</td><td>12.76</td><td>15.44</td></tr><tr><td>Test</td><td>-0.655</td><td>14.54</td><td>18.10</td></tr>
-  </tbody>
-</table>
-<p style="margin-top:1rem;color:#555;font-size:.88rem">
-Modelo: <code>ExactGP</code> con kernel <code>ScaleKernel(RBFKernel + PeriodicKernel)</code>
-sobre la serie diaria de MY1, entrenado con Adam (lr=0.05, 200 epochs) y MLL exacto.
-La estandarización se ajusta solo sobre el split de entrenamiento.
-</p>
-
+  <div class="img-grid">  <div class="img-card">    <img src="img/fig_gp_no2.png"/>    <p>Prediccion GP de NO2 semanal (MY1, test 2022). 75% de muestras test dentro del IC ±1sigma.</p>  </div></div><table class="data-table">  <thead><tr><th>Split</th><th>R2</th><th>MAE (ug/m3)</th><th>RMSE (ug/m3)</th></tr></thead>  <tbody><tr><td>Train 2019-2021</td><td>0.796</td><td>5.02</td><td>6.43</td></tr><tr><td>Test 2022</td><td>0.106</td><td>6.82</td><td>8.85</td></tr></tbody></table><p style="margin-top:1rem;color:#555;font-size:.88rem">Modelo: <code>ExactGP</code> autoregresivo AR(k=5) sobre NO2 semanal de MY1.<br>Kernel: <code>ScaleKernel(LinearKernel + MaternKernel(5/2) + PeriodicKernel)</code> + ruido Gaussiano homocedástico (equivalente a WhiteKernel).<br>Features: 5 lags semanales + sin/cos de semana del ano (ciclo anual). Estandarizacion ajustada solo sobre el split de entrenamiento. El R2 en test se ve limitado por la ruptura estructural del NO2 en 2020-2021 (COVID).</p>
 </div>
 <div id="tab-mapas" class="tab-content">
   <p class="section-title">Representación geográfica</p>
