@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d74300f7e43184fe1bb9e09dc62c4fe3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d74300f7e43184fe1bb9e09dc62c4fe3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d74300f7e43184fe1bb9e09dc62c4fe3 = L.map(
+                "map_d74300f7e43184fe1bb9e09dc62c4fe3",
+                {
+                    center: [51.53327, -0.142795],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8f1d783ac5fa2cf5c499e4cf542b003b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8f1d783ac5fa2cf5c499e4cf542b003b.addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+            var marker_70198f17ced723c83325dc7e8294ea18 = L.marker(
+                [51.55384, -0.167],
+                {
+}
+            ).addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+        var popup_08ddec01a447a0d5fbdd9fdb9a22ee63 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10fa4c9ea2308630b36a77bb3f4aa8dc = $(`<div id="html_10fa4c9ea2308630b36a77bb3f4aa8dc" style="width: 100.0%; height: 100.0%;">Origen: Royal Free Hospital</div>`)[0];
+                popup_08ddec01a447a0d5fbdd9fdb9a22ee63.setContent(html_10fa4c9ea2308630b36a77bb3f4aa8dc);
+            
+        
+
+        marker_70198f17ced723c83325dc7e8294ea18.bindPopup(popup_08ddec01a447a0d5fbdd9fdb9a22ee63)
+        ;
+
+        
+    
+    
+            marker_70198f17ced723c83325dc7e8294ea18.bindTooltip(
+                `<div>
+                     Origen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_740fc133bf92c3c7957ef7c1b21cd257 = L.marker(
+                [51.5127, -0.11859],
+                {
+}
+            ).addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+        var popup_36b4fd3812fa2ea4cf61c2994134db94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26807e0060204f24d92a4370f3a6b032 = $(`<div id="html_26807e0060204f24d92a4370f3a6b032" style="width: 100.0%; height: 100.0%;">Destino: Aldwych</div>`)[0];
+                popup_36b4fd3812fa2ea4cf61c2994134db94.setContent(html_26807e0060204f24d92a4370f3a6b032);
+            
+        
+
+        marker_740fc133bf92c3c7957ef7c1b21cd257.bindPopup(popup_36b4fd3812fa2ea4cf61c2994134db94)
+        ;
+
+        
+    
+    
+            marker_740fc133bf92c3c7957ef7c1b21cd257.bindTooltip(
+                `<div>
+                     Destino
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_fd6e6df3afa65639b80c69ad8e20534c = L.polyline(
+                [[51.55726, -0.1471], [51.5553, -0.1451], [51.55352, -0.14324], [51.55206, -0.14148], [51.55021, -0.14072], [51.54819, -0.14115], [51.54593, -0.14166], [51.5442, -0.14143], [51.54197, -0.14103], [51.54, -0.14063], [51.53867, -0.14092], [51.53717, -0.14084], [51.53665, -0.14266], [51.53633, -0.1446], [51.53446, -0.14641], [51.53162, -0.14514], [51.52963, -0.14433], [51.52817, -0.1442], [51.5252, -0.14411], [51.52297, -0.14395], [51.51988, -0.14386], [51.51594, -0.14222], [51.51233, -0.13986]],
+                {"bubblingMouseEvents": true, "color": "#16a34a", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#16a34a", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.92, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+            poly_line_fd6e6df3afa65639b80c69ad8e20534c.bindTooltip(
+                `<div>
+                     Ruta ECO | bus 88 | NO2 medio 32.9 ug/m3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6ab7030d4286038d4cf154868a09dd89 = L.polyline(
+                [[51.543681, -0.174894], [51.534521, -0.173948], [51.522883, -0.15713], [51.514304, -0.149723], [51.506947, -0.142787], [51.50132, -0.124861]],
+                {"bubblingMouseEvents": true, "color": "#64748b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#64748b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+            poly_line_6ab7030d4286038d4cf154868a09dd89.bindTooltip(
+                `<div>
+                     Ruta viable | metro Jubilee | NO2 medio 33.6 ug/m3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_64f08b6ff65815f69b6499e99a44bbf5 = L.polyline(
+                [[51.52113, -0.13505], [51.52411, -0.13765], [51.52594, -0.13868], [51.52737, -0.13874], [51.53403, -0.13932], [51.53651, -0.14057], [51.53843, -0.14234], [51.54229, -0.14693], [51.54427, -0.14932], [51.54551, -0.15003]],
+                {"bubblingMouseEvents": true, "color": "#64748b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#64748b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+            poly_line_64f08b6ff65815f69b6499e99a44bbf5.bindTooltip(
+                `<div>
+                     Ruta viable | bus 24 | NO2 medio 33.6 ug/m3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7312f4e857c9914ef4914f110f427807 = L.polyline(
+                [[51.54644, -0.1572], [51.54375, -0.15209], [51.54311, -0.14974], [51.54264, -0.14761], [51.54288, -0.14355], [51.54197, -0.14103], [51.5398, -0.14135], [51.53696, -0.13933], [51.53414, -0.1381], [51.53199, -0.13576], [51.52861, -0.13213], [51.52707, -0.13218], [51.52569, -0.13534], [51.52522, -0.13671], [51.52257, -0.13608], [51.52059, -0.13423]],
+                {"bubblingMouseEvents": true, "color": "#64748b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#64748b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+            poly_line_7312f4e857c9914ef4914f110f427807.bindTooltip(
+                `<div>
+                     Ruta viable | bus n5 | NO2 medio 33.7 ug/m3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_806a39bbe6e6dfc28a1230d93c814fdb = L.polyline(
+                [[51.54289, -0.17407], [51.53933, -0.17569], [51.53678, -0.17614], [51.53409, -0.17376], [51.53068, -0.16972], [51.52937, -0.16686], [51.52756, -0.16467], [51.5261, -0.16202], [51.52257, -0.15771], [51.51997, -0.15646], [51.5178, -0.15548], [51.51438, -0.15391], [51.51421, -0.15179], [51.51499, -0.14475], [51.51459, -0.14167], [51.51123, -0.13887]],
+                {"bubblingMouseEvents": true, "color": "#64748b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#64748b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+            poly_line_806a39bbe6e6dfc28a1230d93c814fdb.bindTooltip(
+                `<div>
+                     Ruta viable | bus n113 | NO2 medio 33.8 ug/m3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b96255104466c269b57bce214af341e6 = L.polyline(
+                [[51.54644, -0.1572], [51.54311, -0.14974], [51.54264, -0.14761], [51.54288, -0.14355], [51.54197, -0.14103], [51.54, -0.14063], [51.53867, -0.14092], [51.53696, -0.13933], [51.53414, -0.1381], [51.53199, -0.13576], [51.52861, -0.13213], [51.52681, -0.13011], [51.5249, -0.12806], [51.52335, -0.12629]],
+                {"bubblingMouseEvents": true, "color": "#64748b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#64748b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+            poly_line_b96255104466c269b57bce214af341e6.bindTooltip(
+                `<div>
+                     Ruta viable | bus 1 | NO2 medio 34.0 ug/m3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e6020fe72715f29b372cad87ecfe4569 = L.polyline(
+                [[51.54642, -0.15099], [51.54626, -0.14762], [51.54662, -0.14251], [51.54593, -0.14166], [51.5442, -0.14143], [51.54197, -0.14103], [51.53907, -0.13857], [51.536, -0.13589], [51.53446, -0.13003], [51.5316, -0.12718], [51.5304, -0.12308], [51.53052, -0.11768], [51.52835, -0.11809], [51.52681, -0.11811], [51.52373, -0.11512]],
+                {"bubblingMouseEvents": true, "color": "#64748b", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#64748b", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d74300f7e43184fe1bb9e09dc62c4fe3);
+        
+    
+            poly_line_e6020fe72715f29b372cad87ecfe4569.bindTooltip(
+                `<div>
+                     Ruta viable | bus 46 | NO2 medio 34.3 ug/m3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
