@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_30e7b2e0a1d417a541871ea17a6b3480 {
+                #map_4c3055c732f7f6290c03a0f95a673253 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -53,17 +53,18 @@
 </head>
 <body>
     
+    <div style="position:fixed;bottom:30px;left:30px;z-index:1000;background:white;padding:10px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.3);font-size:12px;"><b>Tipo de estación</b><br><i style="background:#c65f46;width:12px;height:12px;display:inline-block;border-radius:50%;margin-right:5px;"></i> Kerbside<br><i style="background:#e67e22;width:12px;height:12px;display:inline-block;border-radius:50%;margin-right:5px;"></i> Roadside<br><i style="background:#2a7db5;width:12px;height:12px;display:inline-block;border-radius:50%;margin-right:5px;"></i> Urban Background<br><i style="background:#2ecc71;width:12px;height:12px;display:inline-block;border-radius:50%;margin-right:5px;"></i> Suburban<br><i style="background:#9b59b6;width:12px;height:12px;display:inline-block;border-radius:50%;margin-right:5px;"></i> Industrial<br></div>
     
-            <div class="folium-map" id="map_30e7b2e0a1d417a541871ea17a6b3480" ></div>
+            <div class="folium-map" id="map_4c3055c732f7f6290c03a0f95a673253" ></div>
         
 </body>
 <script>
     
     
-            var map_30e7b2e0a1d417a541871ea17a6b3480 = L.map(
-                "map_30e7b2e0a1d417a541871ea17a6b3480",
+            var map_4c3055c732f7f6290c03a0f95a673253 = L.map(
+                "map_4c3055c732f7f6290c03a0f95a673253",
                 {
-                    center: [51.51, -0.12],
+                    center: [51.505, -0.09],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 11,
@@ -78,7 +79,7 @@
 
         
     
-            var tile_layer_6bc87c985a57b23ca11f3bfcf93b71d0 = L.tileLayer(
+            var tile_layer_da6424ac0dd221693c93320809c66d16 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -95,47 +96,2063 @@
             );
         
     
-            tile_layer_6bc87c985a57b23ca11f3bfcf93b71d0.addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
+            tile_layer_da6424ac0dd221693c93320809c66d16.addTo(map_4c3055c732f7f6290c03a0f95a673253);
         
     
-            var marker_a4d0d4bd6a15f414fb636776b5e21781 = L.marker(
+            var marker_4a9508b95eafee4eef37fe0032d2d8ba = L.marker(
+                [51.529389, 0.132857],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_8d125267330aec7144a5df7750b75125 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56c1820fadf0ba2fe6e9b5a22f4ec4e5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_40230798f9330f914b0f4c2b315dc3e8 = $(`<div id="html_40230798f9330f914b0f4c2b315dc3e8" style="width: 100.0%; height: 100.0%;"><b>BG2</b> &mdash; Barking and Dagenham - Scrattons Farm<br>Tipo: Suburban<br>Municipio: Barking and Dagenham</div>`)[0];
+                popup_56c1820fadf0ba2fe6e9b5a22f4ec4e5.setContent(html_40230798f9330f914b0f4c2b315dc3e8);
+            
+        
+
+        marker_4a9508b95eafee4eef37fe0032d2d8ba.bindPopup(popup_56c1820fadf0ba2fe6e9b5a22f4ec4e5)
+        ;
+
+        
+    
+    
+            marker_4a9508b95eafee4eef37fe0032d2d8ba.bindTooltip(
+                `<div>
+                     BG2 — Barking and Dagenham - Scrattons Farm (Suburban)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a9508b95eafee4eef37fe0032d2d8ba.setIcon(icon_8d125267330aec7144a5df7750b75125);
+            
+    
+            var marker_65c5766d96e4acfbe24ff14b7fd78de4 = L.marker(
+                [51.4906102082147, 0.158914493927518],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_37329285689e450764c0a1fd7b0bf35f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2742867f5ee4bd08ebfb433cf007ee0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9c94b5e6040694fe1db999ada8b22847 = $(`<div id="html_9c94b5e6040694fe1db999ada8b22847" style="width: 100.0%; height: 100.0%;"><b>BX2</b> &mdash; Bexley - Belvedere<br>Tipo: Suburban<br>Municipio: Bexley</div>`)[0];
+                popup_d2742867f5ee4bd08ebfb433cf007ee0.setContent(html_9c94b5e6040694fe1db999ada8b22847);
+            
+        
+
+        marker_65c5766d96e4acfbe24ff14b7fd78de4.bindPopup(popup_d2742867f5ee4bd08ebfb433cf007ee0)
+        ;
+
+        
+    
+    
+            marker_65c5766d96e4acfbe24ff14b7fd78de4.bindTooltip(
+                `<div>
+                     BX2 — Bexley - Belvedere (Suburban)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_65c5766d96e4acfbe24ff14b7fd78de4.setIcon(icon_37329285689e450764c0a1fd7b0bf35f);
+            
+    
+            var marker_7d0341dcfd56c9e2db188a643ee84dbe = L.marker(
+                [51.4946486813055, 0.137279111232178],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_553730322320001622f63a2b689034a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7f41172e1c76d5c34948d0e7f3485b3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cf5c327ab2bd83f8ff0eaff624ea49de = $(`<div id="html_cf5c327ab2bd83f8ff0eaff624ea49de" style="width: 100.0%; height: 100.0%;"><b>BQ7</b> &mdash; Bexley - Belvedere West<br>Tipo: Urban Background<br>Municipio: Bexley</div>`)[0];
+                popup_e7f41172e1c76d5c34948d0e7f3485b3.setContent(html_cf5c327ab2bd83f8ff0eaff624ea49de);
+            
+        
+
+        marker_7d0341dcfd56c9e2db188a643ee84dbe.bindPopup(popup_e7f41172e1c76d5c34948d0e7f3485b3)
+        ;
+
+        
+    
+    
+            marker_7d0341dcfd56c9e2db188a643ee84dbe.bindTooltip(
+                `<div>
+                     BQ7 — Bexley - Belvedere West (Urban Background)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7d0341dcfd56c9e2db188a643ee84dbe.setIcon(icon_553730322320001622f63a2b689034a9);
+            
+    
+            var marker_9149b9dd3ae450aff2a7c50388f160aa = L.marker(
+                [51.4659832746662, 0.184877126994369],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_144e519a5a9085d28216e2fe234c853a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd250fa685139d7605b021936f36e093 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_73f2da43ce52bafaf77e46245f47a65a = $(`<div id="html_73f2da43ce52bafaf77e46245f47a65a" style="width: 100.0%; height: 100.0%;"><b>BX1</b> &mdash; Bexley - Slade Green<br>Tipo: Suburban<br>Municipio: Bexley</div>`)[0];
+                popup_cd250fa685139d7605b021936f36e093.setContent(html_73f2da43ce52bafaf77e46245f47a65a);
+            
+        
+
+        marker_9149b9dd3ae450aff2a7c50388f160aa.bindPopup(popup_cd250fa685139d7605b021936f36e093)
+        ;
+
+        
+    
+    
+            marker_9149b9dd3ae450aff2a7c50388f160aa.bindTooltip(
+                `<div>
+                     BX1 — Bexley - Slade Green (Suburban)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9149b9dd3ae450aff2a7c50388f160aa.setIcon(icon_144e519a5a9085d28216e2fe234c853a);
+            
+    
+            var marker_275ef794f6df5caf39965428d9a2d1ca = L.marker(
+                [51.5324054617809, -0.217718908639377],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_a5382217b2f33142b365e8057e65db59 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36cba3496c7b2f9b2de505226e23f2f0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_482101be6fc25c843f8820831e0abec0 = $(`<div id="html_482101be6fc25c843f8820831e0abec0" style="width: 100.0%; height: 100.0%;"><b>BT8</b> &mdash; Brent - ARK Franklin Primary Academy<br>Tipo: Roadside<br>Municipio: Brent</div>`)[0];
+                popup_36cba3496c7b2f9b2de505226e23f2f0.setContent(html_482101be6fc25c843f8820831e0abec0);
+            
+        
+
+        marker_275ef794f6df5caf39965428d9a2d1ca.bindPopup(popup_36cba3496c7b2f9b2de505226e23f2f0)
+        ;
+
+        
+    
+    
+            marker_275ef794f6df5caf39965428d9a2d1ca.bindTooltip(
+                `<div>
+                     BT8 — Brent - ARK Franklin Primary Academy (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_275ef794f6df5caf39965428d9a2d1ca.setIcon(icon_a5382217b2f33142b365e8057e65db59);
+            
+    
+            var marker_bcb03c42dc7128d37ba59c7bc940e893 = L.marker(
+                [51.552476, -0.258089],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_9dc73285be280d2056f5ca9104bc8c3a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8aeb05f23d07121baab57a8d8f351717 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7d76dd5473762b4a18553b04740665ce = $(`<div id="html_7d76dd5473762b4a18553b04740665ce" style="width: 100.0%; height: 100.0%;"><b>BT4</b> &mdash; Brent - Ikea<br>Tipo: Roadside<br>Municipio: Brent</div>`)[0];
+                popup_8aeb05f23d07121baab57a8d8f351717.setContent(html_7d76dd5473762b4a18553b04740665ce);
+            
+        
+
+        marker_bcb03c42dc7128d37ba59c7bc940e893.bindPopup(popup_8aeb05f23d07121baab57a8d8f351717)
+        ;
+
+        
+    
+    
+            marker_bcb03c42dc7128d37ba59c7bc940e893.bindTooltip(
+                `<div>
+                     BT4 — Brent - Ikea (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bcb03c42dc7128d37ba59c7bc940e893.setIcon(icon_9dc73285be280d2056f5ca9104bc8c3a);
+            
+    
+            var marker_ea5df4922722f06319842a2d7a60a926 = L.marker(
+                [51.537799, -0.247793],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_c609d375e05b5cbaa4b780a256ede229 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dabc38eec5329257c7472606a098e185 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_05550bb6739fc2a4023fe9284505872c = $(`<div id="html_05550bb6739fc2a4023fe9284505872c" style="width: 100.0%; height: 100.0%;"><b>BT6</b> &mdash; Brent - John Keble Primary School<br>Tipo: Roadside<br>Municipio: Brent</div>`)[0];
+                popup_dabc38eec5329257c7472606a098e185.setContent(html_05550bb6739fc2a4023fe9284505872c);
+            
+        
+
+        marker_ea5df4922722f06319842a2d7a60a926.bindPopup(popup_dabc38eec5329257c7472606a098e185)
+        ;
+
+        
+    
+    
+            marker_ea5df4922722f06319842a2d7a60a926.bindTooltip(
+                `<div>
+                     BT6 — Brent - John Keble Primary School (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ea5df4922722f06319842a2d7a60a926.setIcon(icon_c609d375e05b5cbaa4b780a256ede229);
+            
+    
+            var marker_f3573e43d1b6fd4b4d096b7aa4c37307 = L.marker(
+                [51.552656, -0.248774],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_9f8ba682abd57c6944b80703e21b0578 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_382c184fe47d5dfd57c56179675ad3f8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f22ab33bd3bf7f3cd3df4f4d7358d958 = $(`<div id="html_f22ab33bd3bf7f3cd3df4f4d7358d958" style="width: 100.0%; height: 100.0%;"><b>BT5</b> &mdash; Brent - Neasden Lane<br>Tipo: Industrial<br>Municipio: Brent</div>`)[0];
+                popup_382c184fe47d5dfd57c56179675ad3f8.setContent(html_f22ab33bd3bf7f3cd3df4f4d7358d958);
+            
+        
+
+        marker_f3573e43d1b6fd4b4d096b7aa4c37307.bindPopup(popup_382c184fe47d5dfd57c56179675ad3f8)
+        ;
+
+        
+    
+    
+            marker_f3573e43d1b6fd4b4d096b7aa4c37307.bindTooltip(
+                `<div>
+                     BT5 — Brent - Neasden Lane (Industrial)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f3573e43d1b6fd4b4d096b7aa4c37307.setIcon(icon_9f8ba682abd57c6944b80703e21b0578);
+            
+    
+            var marker_74ea87a98df07b2f5ee9caf27c30be64 = L.marker(
+                [51.522287, -0.125848],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_d2f83d4b045fb39c821747809daa4d1f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3917663e5d166e3b7f10071bd0fdc9e6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_264b9d6f5be95959a7d6b11e5558558f = $(`<div id="html_264b9d6f5be95959a7d6b11e5558558f" style="width: 100.0%; height: 100.0%;"><b>BL0</b> &mdash; Camden - Bloomsbury<br>Tipo: Urban Background<br>Municipio: Camden</div>`)[0];
+                popup_3917663e5d166e3b7f10071bd0fdc9e6.setContent(html_264b9d6f5be95959a7d6b11e5558558f);
+            
+        
+
+        marker_74ea87a98df07b2f5ee9caf27c30be64.bindPopup(popup_3917663e5d166e3b7f10071bd0fdc9e6)
+        ;
+
+        
+    
+    
+            marker_74ea87a98df07b2f5ee9caf27c30be64.bindTooltip(
+                `<div>
+                     BL0 — Camden - Bloomsbury (Urban Background)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_74ea87a98df07b2f5ee9caf27c30be64.setIcon(icon_d2f83d4b045fb39c821747809daa4d1f);
+            
+    
+            var marker_b38551525d304b081d9894fea7d963c3 = L.marker(
+                [51.411349, -0.12311],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_3ecaf840c6bfb34ea23109bf38a7c2c9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9aa2081c57544cabb1dc8d0d60a34aee = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f11e5a9052887f3974781759446b65c1 = $(`<div id="html_f11e5a9052887f3974781759446b65c1" style="width: 100.0%; height: 100.0%;"><b>CR5</b> &mdash; Croydon - Norbury<br>Tipo: Kerbside<br>Municipio: Croydon</div>`)[0];
+                popup_9aa2081c57544cabb1dc8d0d60a34aee.setContent(html_f11e5a9052887f3974781759446b65c1);
+            
+        
+
+        marker_b38551525d304b081d9894fea7d963c3.bindPopup(popup_9aa2081c57544cabb1dc8d0d60a34aee)
+        ;
+
+        
+    
+    
+            marker_b38551525d304b081d9894fea7d963c3.bindTooltip(
+                `<div>
+                     CR5 — Croydon - Norbury (Kerbside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b38551525d304b081d9894fea7d963c3.setIcon(icon_3ecaf840c6bfb34ea23109bf38a7c2c9);
+            
+    
+            var marker_9581caa98284efd29114007014029694 = L.marker(
+                [51.613865, -0.125338],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_d529f6aede14aa8c8fdf4467be32cd00 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6419ca839c39e924002180e18de47d80 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_83cc90fdbc010009b4a6d679ce4bef70 = $(`<div id="html_83cc90fdbc010009b4a6d679ce4bef70" style="width: 100.0%; height: 100.0%;"><b>EN5</b> &mdash; Enfield - Bowes Primary School<br>Tipo: Roadside<br>Municipio: Enfield</div>`)[0];
+                popup_6419ca839c39e924002180e18de47d80.setContent(html_83cc90fdbc010009b4a6d679ce4bef70);
+            
+        
+
+        marker_9581caa98284efd29114007014029694.bindPopup(popup_6419ca839c39e924002180e18de47d80)
+        ;
+
+        
+    
+    
+            marker_9581caa98284efd29114007014029694.bindTooltip(
+                `<div>
+                     EN5 — Enfield - Bowes Primary School (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9581caa98284efd29114007014029694.setIcon(icon_d529f6aede14aa8c8fdf4467be32cd00);
+            
+    
+            var marker_5ffb534fd5f20b2ad81b9ae9df7a2509 = L.marker(
+                [51.6450367266602, -0.0661800662229116],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_c9236180365e839d294baf4cf7ba106e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e187bd12d4b5cee34603b7d3080dff03 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4ade55fb238506cbcabc8383fcc0e6b2 = $(`<div id="html_4ade55fb238506cbcabc8383fcc0e6b2" style="width: 100.0%; height: 100.0%;"><b>EN1</b> &mdash; Enfield - Bush Hill Park<br>Tipo: Suburban<br>Municipio: Enfield</div>`)[0];
+                popup_e187bd12d4b5cee34603b7d3080dff03.setContent(html_4ade55fb238506cbcabc8383fcc0e6b2);
+            
+        
+
+        marker_5ffb534fd5f20b2ad81b9ae9df7a2509.bindPopup(popup_e187bd12d4b5cee34603b7d3080dff03)
+        ;
+
+        
+    
+    
+            marker_5ffb534fd5f20b2ad81b9ae9df7a2509.bindTooltip(
+                `<div>
+                     EN1 — Enfield - Bush Hill Park (Suburban)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5ffb534fd5f20b2ad81b9ae9df7a2509.setIcon(icon_c9236180365e839d294baf4cf7ba106e);
+            
+    
+            var marker_25b837795ca1350c5502c3e66119000b = L.marker(
+                [51.614864007, -0.0507658363689],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_bd238cbd2154985f015a051bb5ff4c6a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_800dc7ed6009dbd465e9fc182e6eb251 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_abaa9ed8805a42201adbdbd535b62790 = $(`<div id="html_abaa9ed8805a42201adbdbd535b62790" style="width: 100.0%; height: 100.0%;"><b>EN4</b> &mdash; Enfield - Derby Road<br>Tipo: Roadside<br>Municipio: Enfield</div>`)[0];
+                popup_800dc7ed6009dbd465e9fc182e6eb251.setContent(html_abaa9ed8805a42201adbdbd535b62790);
+            
+        
+
+        marker_25b837795ca1350c5502c3e66119000b.bindPopup(popup_800dc7ed6009dbd465e9fc182e6eb251)
+        ;
+
+        
+    
+    
+            marker_25b837795ca1350c5502c3e66119000b.bindTooltip(
+                `<div>
+                     EN4 — Enfield - Derby Road (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_25b837795ca1350c5502c3e66119000b.setIcon(icon_bd238cbd2154985f015a051bb5ff4c6a);
+            
+    
+            var marker_736eaa3490f0d50dbf353f91bcf375f3 = L.marker(
+                [51.66864334727, -0.02200720557],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_478acd343e72ca5a52c3c351ac3c667b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_867709cfef4aa43099c47ea04af901f0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ad68dbfac28b1bd7db83e4002d6b15ec = $(`<div id="html_ad68dbfac28b1bd7db83e4002d6b15ec" style="width: 100.0%; height: 100.0%;"><b>EN7</b> &mdash; Enfield - Prince of Wales School<br>Tipo: Urban Background<br>Municipio: Enfield</div>`)[0];
+                popup_867709cfef4aa43099c47ea04af901f0.setContent(html_ad68dbfac28b1bd7db83e4002d6b15ec);
+            
+        
+
+        marker_736eaa3490f0d50dbf353f91bcf375f3.bindPopup(popup_867709cfef4aa43099c47ea04af901f0)
+        ;
+
+        
+    
+    
+            marker_736eaa3490f0d50dbf353f91bcf375f3.bindTooltip(
+                `<div>
+                     EN7 — Enfield - Prince of Wales School (Urban Background)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_736eaa3490f0d50dbf353f91bcf375f3.setIcon(icon_478acd343e72ca5a52c3c351ac3c667b);
+            
+    
+            var marker_5c974604e940a202d4c1c35e770ab166 = L.marker(
+                [51.490532, 0.074003],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_c4c7641eeb9146b2f43f4162c94bc6db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_589e6ed39e6cf3c599b5ab696f94f0f5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f44850d49dcb8230f5ff98d3a0c5e932 = $(`<div id="html_f44850d49dcb8230f5ff98d3a0c5e932" style="width: 100.0%; height: 100.0%;"><b>GN0</b> &mdash; Greenwich - A206 Burrage Grove<br>Tipo: Roadside<br>Municipio: Greenwich</div>`)[0];
+                popup_589e6ed39e6cf3c599b5ab696f94f0f5.setContent(html_f44850d49dcb8230f5ff98d3a0c5e932);
+            
+        
+
+        marker_5c974604e940a202d4c1c35e770ab166.bindPopup(popup_589e6ed39e6cf3c599b5ab696f94f0f5)
+        ;
+
+        
+    
+    
+            marker_5c974604e940a202d4c1c35e770ab166.bindTooltip(
+                `<div>
+                     GN0 — Greenwich - A206 Burrage Grove (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c974604e940a202d4c1c35e770ab166.setIcon(icon_c4c7641eeb9146b2f43f4162c94bc6db);
+            
+    
+            var marker_4f444a9f619570543ed562c4d49bc2d3 = L.marker(
+                [51.472504, -0.012381],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_c753c15fff9e02e6b50e722b60cd00e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d9ad5a4a04866ffb1ec9e9783aaee44 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a5434edfdc13b30b414f7cd67a51ed14 = $(`<div id="html_a5434edfdc13b30b414f7cd67a51ed14" style="width: 100.0%; height: 100.0%;"><b>GR7</b> &mdash; Greenwich - Blackheath<br>Tipo: Roadside<br>Municipio: Greenwich</div>`)[0];
+                popup_3d9ad5a4a04866ffb1ec9e9783aaee44.setContent(html_a5434edfdc13b30b414f7cd67a51ed14);
+            
+        
+
+        marker_4f444a9f619570543ed562c4d49bc2d3.bindPopup(popup_3d9ad5a4a04866ffb1ec9e9783aaee44)
+        ;
+
+        
+    
+    
+            marker_4f444a9f619570543ed562c4d49bc2d3.bindTooltip(
+                `<div>
+                     GR7 — Greenwich - Blackheath (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4f444a9f619570543ed562c4d49bc2d3.setIcon(icon_c753c15fff9e02e6b50e722b60cd00e9);
+            
+    
+            var marker_464485358299e9a52fd1eb70f9207212 = L.marker(
+                [51.45258, 0.070766],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_8bb69cf6967c39398b84151fc6dbfac4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85d9cf96973ad3d604ce995bd3b4712a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c0c93ea9ce9972a67896d7148e1e7bde = $(`<div id="html_c0c93ea9ce9972a67896d7148e1e7bde" style="width: 100.0%; height: 100.0%;"><b>GR4</b> &mdash; Greenwich - Eltham<br>Tipo: Suburban<br>Municipio: Greenwich</div>`)[0];
+                popup_85d9cf96973ad3d604ce995bd3b4712a.setContent(html_c0c93ea9ce9972a67896d7148e1e7bde);
+            
+        
+
+        marker_464485358299e9a52fd1eb70f9207212.bindPopup(popup_85d9cf96973ad3d604ce995bd3b4712a)
+        ;
+
+        
+    
+    
+            marker_464485358299e9a52fd1eb70f9207212.bindTooltip(
+                `<div>
+                     GR4 — Greenwich - Eltham (Suburban)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_464485358299e9a52fd1eb70f9207212.setIcon(icon_8bb69cf6967c39398b84151fc6dbfac4);
+            
+    
+            var marker_7b3c910f08f48235639f781387c63647 = L.marker(
+                [51.4563, 0.085606],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_6eb4bfdfa5934644b77a5d5e6cb01fc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e8ddf020076689e6813492975d1a4931 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_354a0bfed98f852b61dcf99a0d4c64b2 = $(`<div id="html_354a0bfed98f852b61dcf99a0d4c64b2" style="width: 100.0%; height: 100.0%;"><b>GB6</b> &mdash; Greenwich - Falconwood<br>Tipo: Roadside<br>Municipio: Bexley</div>`)[0];
+                popup_e8ddf020076689e6813492975d1a4931.setContent(html_354a0bfed98f852b61dcf99a0d4c64b2);
+            
+        
+
+        marker_7b3c910f08f48235639f781387c63647.bindPopup(popup_e8ddf020076689e6813492975d1a4931)
+        ;
+
+        
+    
+    
+            marker_7b3c910f08f48235639f781387c63647.bindTooltip(
+                `<div>
+                     GB6 — Greenwich - Falconwood (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b3c910f08f48235639f781387c63647.setIcon(icon_6eb4bfdfa5934644b77a5d5e6cb01fc0);
+            
+    
+            var marker_77a3fc45e3f4db3c7cf45e26578e954a = L.marker(
+                [51.4346627060562, 0.0642224671704697],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_549e5f4d1b6b6ad3a2d3f7a329c6f9cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e39d78bf630d4f1e67810a8a27e8fa6f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f3b9d81e19a8db1b9ac78d06fb9ce8d9 = $(`<div id="html_f3b9d81e19a8db1b9ac78d06fb9ce8d9" style="width: 100.0%; height: 100.0%;"><b>GN4</b> &mdash; Greenwich - Fiveways Sidcup Rd A20<br>Tipo: Roadside<br>Municipio: Greenwich</div>`)[0];
+                popup_e39d78bf630d4f1e67810a8a27e8fa6f.setContent(html_f3b9d81e19a8db1b9ac78d06fb9ce8d9);
+            
+        
+
+        marker_77a3fc45e3f4db3c7cf45e26578e954a.bindPopup(popup_e39d78bf630d4f1e67810a8a27e8fa6f)
+        ;
+
+        
+    
+    
+            marker_77a3fc45e3f4db3c7cf45e26578e954a.bindTooltip(
+                `<div>
+                     GN4 — Greenwich - Fiveways Sidcup Rd A20 (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_77a3fc45e3f4db3c7cf45e26578e954a.setIcon(icon_549e5f4d1b6b6ad3a2d3f7a329c6f9cc);
+            
+    
+            var marker_16ed37ca18f710df9faddfeace19a6bb = L.marker(
+                [51.4937746695818, 0.0107796237032558],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_e48e94e3ccbf89c1899ceec6ca87bad8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4af25672376f54442c265011d172ec67 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_01f78d5c553c434dfd390929fafe71ab = $(`<div id="html_01f78d5c553c434dfd390929fafe71ab" style="width: 100.0%; height: 100.0%;"><b>GN6</b> &mdash; Greenwich - John Harrison Way<br>Tipo: Roadside<br>Municipio: Greenwich</div>`)[0];
+                popup_4af25672376f54442c265011d172ec67.setContent(html_01f78d5c553c434dfd390929fafe71ab);
+            
+        
+
+        marker_16ed37ca18f710df9faddfeace19a6bb.bindPopup(popup_4af25672376f54442c265011d172ec67)
+        ;
+
+        
+    
+    
+            marker_16ed37ca18f710df9faddfeace19a6bb.bindTooltip(
+                `<div>
+                     GN6 — Greenwich - John Harrison Way (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_16ed37ca18f710df9faddfeace19a6bb.setIcon(icon_e48e94e3ccbf89c1899ceec6ca87bad8);
+            
+    
+            var marker_27ec6a7be725e21b6156b68270946974 = L.marker(
+                [51.486957, 0.095111],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_bc0c3d2d4043db2bc2992b8352eb0bf4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5e417e8f50e6f7acdf074436c69b2ab = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a214c2b36093a3e091b7e23f03577d6d = $(`<div id="html_a214c2b36093a3e091b7e23f03577d6d" style="width: 100.0%; height: 100.0%;"><b>GN3</b> &mdash; Greenwich - Plumstead High Street<br>Tipo: Roadside<br>Municipio: Greenwich</div>`)[0];
+                popup_e5e417e8f50e6f7acdf074436c69b2ab.setContent(html_a214c2b36093a3e091b7e23f03577d6d);
+            
+        
+
+        marker_27ec6a7be725e21b6156b68270946974.bindPopup(popup_e5e417e8f50e6f7acdf074436c69b2ab)
+        ;
+
+        
+    
+    
+            marker_27ec6a7be725e21b6156b68270946974.bindTooltip(
+                `<div>
+                     GN3 — Greenwich - Plumstead High Street (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_27ec6a7be725e21b6156b68270946974.setIcon(icon_bc0c3d2d4043db2bc2992b8352eb0bf4);
+            
+    
+            var marker_654b073812992bc9e4071c653ea28c60 = L.marker(
+                [51.4839072533485, 0.000407396935849736],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_e14a31824a4fd451abe8ca81e51a7cc3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de5d5bab7ea3e8e9fc57380a3996a4c9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ee51085b098c229354fd8bf17324a40f = $(`<div id="html_ee51085b098c229354fd8bf17324a40f" style="width: 100.0%; height: 100.0%;"><b>GN5</b> &mdash; Greenwich - Trafalgar Road (Hoskins St)<br>Tipo: Roadside<br>Municipio: Greenwich</div>`)[0];
+                popup_de5d5bab7ea3e8e9fc57380a3996a4c9.setContent(html_ee51085b098c229354fd8bf17324a40f);
+            
+        
+
+        marker_654b073812992bc9e4071c653ea28c60.bindPopup(popup_de5d5bab7ea3e8e9fc57380a3996a4c9)
+        ;
+
+        
+    
+    
+            marker_654b073812992bc9e4071c653ea28c60.bindTooltip(
+                `<div>
+                     GN5 — Greenwich - Trafalgar Road (Hoskins St) (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_654b073812992bc9e4071c653ea28c60.setIcon(icon_e14a31824a4fd451abe8ca81e51a7cc3);
+            
+    
+            var marker_436a0fb79d84950951725251cb51541d = L.marker(
+                [51.456357, 0.040725],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_f5c20a1dfc19509446bbe91ed3004eab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9c6e86eebee0ab4f45956a077bdda560 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5b668280f9a8844bf7a9e36ab30c4466 = $(`<div id="html_5b668280f9a8844bf7a9e36ab30c4466" style="width: 100.0%; height: 100.0%;"><b>GR9</b> &mdash; Greenwich - Westhorne Avenue<br>Tipo: Roadside<br>Municipio: Greenwich</div>`)[0];
+                popup_9c6e86eebee0ab4f45956a077bdda560.setContent(html_5b668280f9a8844bf7a9e36ab30c4466);
+            
+        
+
+        marker_436a0fb79d84950951725251cb51541d.bindPopup(popup_9c6e86eebee0ab4f45956a077bdda560)
+        ;
+
+        
+    
+    
+            marker_436a0fb79d84950951725251cb51541d.bindTooltip(
+                `<div>
+                     GR9 — Greenwich - Westhorne Avenue (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_436a0fb79d84950951725251cb51541d.setIcon(icon_f5c20a1dfc19509446bbe91ed3004eab);
+            
+    
+            var marker_3d80863e81890ca1f06786dee9087d9f = L.marker(
+                [51.486884, 0.017901],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_363bedccd63f24651741e393bc710043 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04c0b6069b6caf807cf468719e8e213d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_de4472a590e5a53e6476144911443c25 = $(`<div id="html_de4472a590e5a53e6476144911443c25" style="width: 100.0%; height: 100.0%;"><b>GR8</b> &mdash; Greenwich - Woolwich Flyover<br>Tipo: Roadside<br>Municipio: Greenwich</div>`)[0];
+                popup_04c0b6069b6caf807cf468719e8e213d.setContent(html_de4472a590e5a53e6476144911443c25);
+            
+        
+
+        marker_3d80863e81890ca1f06786dee9087d9f.bindPopup(popup_04c0b6069b6caf807cf468719e8e213d)
+        ;
+
+        
+    
+    
+            marker_3d80863e81890ca1f06786dee9087d9f.bindTooltip(
+                `<div>
+                     GR8 — Greenwich - Woolwich Flyover (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d80863e81890ca1f06786dee9087d9f.setIcon(icon_363bedccd63f24651741e393bc710043);
+            
+    
+            var marker_af979fb0d23d8eac692c4fb8f9853750 = L.marker(
+                [51.526454, -0.08491],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_b85107c569a0d794732ab840f6793fb7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bcf5bdfdd115c6ab74d74bc372c0a418 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c02bf7a715b4ba5b71b74714995bedef = $(`<div id="html_c02bf7a715b4ba5b71b74714995bedef" style="width: 100.0%; height: 100.0%;"><b>HK6</b> &mdash; Hackney - Old Street<br>Tipo: Roadside<br>Municipio: Hackney</div>`)[0];
+                popup_bcf5bdfdd115c6ab74d74bc372c0a418.setContent(html_c02bf7a715b4ba5b71b74714995bedef);
+            
+        
+
+        marker_af979fb0d23d8eac692c4fb8f9853750.bindPopup(popup_bcf5bdfdd115c6ab74d74bc372c0a418)
+        ;
+
+        
+    
+    
+            marker_af979fb0d23d8eac692c4fb8f9853750.bindTooltip(
+                `<div>
+                     HK6 — Hackney - Old Street (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af979fb0d23d8eac692c4fb8f9853750.setIcon(icon_b85107c569a0d794732ab840f6793fb7);
+            
+    
+            var marker_e43a9528450d4b9e7cd91f4e294ccc84 = L.marker(
+                [51.5839769007709, -0.125400278484885],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_d9fefa5fb7a990e7494fef52e9cc569a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af34cc98521c8ead766450da100a1516 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_48876dfeef98599fe85856bf86e5be26 = $(`<div id="html_48876dfeef98599fe85856bf86e5be26" style="width: 100.0%; height: 100.0%;"><b>HG4</b> &mdash; Haringey  - Priory Park South<br>Tipo: Urban Background<br>Municipio: Haringey</div>`)[0];
+                popup_af34cc98521c8ead766450da100a1516.setContent(html_48876dfeef98599fe85856bf86e5be26);
+            
+        
+
+        marker_e43a9528450d4b9e7cd91f4e294ccc84.bindPopup(popup_af34cc98521c8ead766450da100a1516)
+        ;
+
+        
+    
+    
+            marker_e43a9528450d4b9e7cd91f4e294ccc84.bindTooltip(
+                `<div>
+                     HG4 — Haringey  - Priory Park South (Urban Background)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e43a9528450d4b9e7cd91f4e294ccc84.setIcon(icon_d9fefa5fb7a990e7494fef52e9cc569a);
+            
+    
+            var marker_4ff4e87f0191d6bd626d2030e7e69681 = L.marker(
+                [51.599302, -0.068218],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_a1395fbce16936a3331094ec3cc72baa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb7866afa8b2c2dda11f19ce362e9ee3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1d3cbbb8111bb88b4fc90208110dcc58 = $(`<div id="html_1d3cbbb8111bb88b4fc90208110dcc58" style="width: 100.0%; height: 100.0%;"><b>HG1</b> &mdash; Haringey - Haringey Town Hall<br>Tipo: Roadside<br>Municipio: Haringey</div>`)[0];
+                popup_eb7866afa8b2c2dda11f19ce362e9ee3.setContent(html_1d3cbbb8111bb88b4fc90208110dcc58);
+            
+        
+
+        marker_4ff4e87f0191d6bd626d2030e7e69681.bindPopup(popup_eb7866afa8b2c2dda11f19ce362e9ee3)
+        ;
+
+        
+    
+    
+            marker_4ff4e87f0191d6bd626d2030e7e69681.bindTooltip(
+                `<div>
+                     HG1 — Haringey - Haringey Town Hall (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ff4e87f0191d6bd626d2030e7e69681.setIcon(icon_a1395fbce16936a3331094ec3cc72baa);
+            
+    
+            var marker_5b6b42b93b793c0fdef63c1c4825e21f = L.marker(
+                [51.520787459334, 0.205460705694044],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_a6388cb87912fe51aa0555ee9ecbf075 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04406875f94dbf19e6a9c361e0a3d20f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_56c2ffe3cde9159afb183562631e8b96 = $(`<div id="html_56c2ffe3cde9159afb183562631e8b96" style="width: 100.0%; height: 100.0%;"><b>HV1</b> &mdash; Havering - Rainham<br>Tipo: Roadside<br>Municipio: Havering</div>`)[0];
+                popup_04406875f94dbf19e6a9c361e0a3d20f.setContent(html_56c2ffe3cde9159afb183562631e8b96);
+            
+        
+
+        marker_5b6b42b93b793c0fdef63c1c4825e21f.bindPopup(popup_04406875f94dbf19e6a9c361e0a3d20f)
+        ;
+
+        
+    
+    
+            marker_5b6b42b93b793c0fdef63c1c4825e21f.bindTooltip(
+                `<div>
+                     HV1 — Havering - Rainham (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5b6b42b93b793c0fdef63c1c4825e21f.setIcon(icon_a6388cb87912fe51aa0555ee9ecbf075);
+            
+    
+            var marker_288edf19008fd67190c889535e1a7013 = L.marker(
+                [51.572976, 0.179079],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_f6102f1257519d3791634c43ef0ceb55 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0e67bda02a5d699c4d5226239b7a9b1d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1a3c253670d11cb9b5d565f7e1853407 = $(`<div id="html_1a3c253670d11cb9b5d565f7e1853407" style="width: 100.0%; height: 100.0%;"><b>HV3</b> &mdash; Havering - Romford<br>Tipo: Roadside<br>Municipio: Havering</div>`)[0];
+                popup_0e67bda02a5d699c4d5226239b7a9b1d.setContent(html_1a3c253670d11cb9b5d565f7e1853407);
+            
+        
+
+        marker_288edf19008fd67190c889535e1a7013.bindPopup(popup_0e67bda02a5d699c4d5226239b7a9b1d)
+        ;
+
+        
+    
+    
+            marker_288edf19008fd67190c889535e1a7013.bindTooltip(
+                `<div>
+                     HV3 — Havering - Romford (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_288edf19008fd67190c889535e1a7013.setIcon(icon_f6102f1257519d3791634c43ef0ceb55);
+            
+    
+            var marker_f9139740293bdb68f640c76199571cbd = L.marker(
+                [51.496309, -0.460826],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_1ef5b10fbb372de146e14a92f7e105c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ab70f95ea0ba14072eeef0bfefd7c60 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_191480e1612643673364cf1392d8b509 = $(`<div id="html_191480e1612643673364cf1392d8b509" style="width: 100.0%; height: 100.0%;"><b>HI0</b> &mdash; Hillingdon - Keats Way<br>Tipo: Suburban<br>Municipio: Hillingdon</div>`)[0];
+                popup_3ab70f95ea0ba14072eeef0bfefd7c60.setContent(html_191480e1612643673364cf1392d8b509);
+            
+        
+
+        marker_f9139740293bdb68f640c76199571cbd.bindPopup(popup_3ab70f95ea0ba14072eeef0bfefd7c60)
+        ;
+
+        
+    
+    
+            marker_f9139740293bdb68f640c76199571cbd.bindTooltip(
+                `<div>
+                     HI0 — Hillingdon - Keats Way (Suburban)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f9139740293bdb68f640c76199571cbd.setIcon(icon_1ef5b10fbb372de146e14a92f7e105c0);
+            
+    
+            var marker_da86f5fcac48639c0f4c4b6be87a919d = L.marker(
+                [51.5210467476039, -0.213492139585065],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_64004f3053b3e5b243027a7d64786feb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd14ae3702da70de2ee37d6d74112124 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1aaa53973efe00b105bf7328c6f1c2bf = $(`<div id="html_1aaa53973efe00b105bf7328c6f1c2bf" style="width: 100.0%; height: 100.0%;"><b>KC1</b> &mdash; Kensington and Chelsea - North Ken<br>Tipo: Urban Background<br>Municipio: Kensington and Chelsea</div>`)[0];
+                popup_cd14ae3702da70de2ee37d6d74112124.setContent(html_1aaa53973efe00b105bf7328c6f1c2bf);
+            
+        
+
+        marker_da86f5fcac48639c0f4c4b6be87a919d.bindPopup(popup_cd14ae3702da70de2ee37d6d74112124)
+        ;
+
+        
+    
+    
+            marker_da86f5fcac48639c0f4c4b6be87a919d.bindTooltip(
+                `<div>
+                     KC1 — Kensington and Chelsea - North Ken (Urban Background)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_da86f5fcac48639c0f4c4b6be87a919d.setIcon(icon_64004f3053b3e5b243027a7d64786feb);
+            
+    
+            var marker_4508a78a8b68b9586122a052820ce75d = L.marker(
+                [51.4854867739729, -0.124545234819213],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_8e89a168eb89a1930491d89a45d9b6f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5433d8037179b2386176881cc614b256 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_380a802d627363571829fa162f7cff08 = $(`<div id="html_380a802d627363571829fa162f7cff08" style="width: 100.0%; height: 100.0%;"><b>LB5</b> &mdash; Lambeth - Bondway Interchange<br>Tipo: Industrial<br>Municipio: Lambeth</div>`)[0];
+                popup_5433d8037179b2386176881cc614b256.setContent(html_380a802d627363571829fa162f7cff08);
+            
+        
+
+        marker_4508a78a8b68b9586122a052820ce75d.bindPopup(popup_5433d8037179b2386176881cc614b256)
+        ;
+
+        
+    
+    
+            marker_4508a78a8b68b9586122a052820ce75d.bindTooltip(
+                `<div>
+                     LB5 — Lambeth - Bondway Interchange (Industrial)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4508a78a8b68b9586122a052820ce75d.setIcon(icon_8e89a168eb89a1930491d89a45d9b6f6);
+            
+    
+            var marker_99b14274f9a3902aeec63afeee5817e2 = L.marker(
+                [51.464113541162, -0.11458102695123],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_e67136dbc18d2b37ac9cdf14c21f38d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2742555e2d3a4b365f2dd78f5226e9e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5240de6f9d9a2005fc7c887186546dc8 = $(`<div id="html_5240de6f9d9a2005fc7c887186546dc8" style="width: 100.0%; height: 100.0%;"><b>LB4</b> &mdash; Lambeth - Brixton Road<br>Tipo: Kerbside<br>Municipio: Lambeth</div>`)[0];
+                popup_e2742555e2d3a4b365f2dd78f5226e9e.setContent(html_5240de6f9d9a2005fc7c887186546dc8);
+            
+        
+
+        marker_99b14274f9a3902aeec63afeee5817e2.bindPopup(popup_e2742555e2d3a4b365f2dd78f5226e9e)
+        ;
+
+        
+    
+    
+            marker_99b14274f9a3902aeec63afeee5817e2.bindTooltip(
+                `<div>
+                     LB4 — Lambeth - Brixton Road (Kerbside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99b14274f9a3902aeec63afeee5817e2.setIcon(icon_e67136dbc18d2b37ac9cdf14c21f38d8);
+            
+    
+            var marker_687df9549e7ae33df09ecb5d94c3c2fc = L.marker(
+                [51.4282131429499, -0.13186863879576],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_a6ac2ff3b29e080aec6625bc95804db2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aca5dd9e0f6d87849c05e9dd320b93ec = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f34b9b3f34d640aec9f95d9e4a3f882c = $(`<div id="html_f34b9b3f34d640aec9f95d9e4a3f882c" style="width: 100.0%; height: 100.0%;"><b>LB6</b> &mdash; Lambeth - Streatham Green<br>Tipo: Urban Background<br>Municipio: Lambeth</div>`)[0];
+                popup_aca5dd9e0f6d87849c05e9dd320b93ec.setContent(html_f34b9b3f34d640aec9f95d9e4a3f882c);
+            
+        
+
+        marker_687df9549e7ae33df09ecb5d94c3c2fc.bindPopup(popup_aca5dd9e0f6d87849c05e9dd320b93ec)
+        ;
+
+        
+    
+    
+            marker_687df9549e7ae33df09ecb5d94c3c2fc.bindTooltip(
+                `<div>
+                     LB6 — Lambeth - Streatham Green (Urban Background)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_687df9549e7ae33df09ecb5d94c3c2fc.setIcon(icon_a6ac2ff3b29e080aec6625bc95804db2);
+            
+    
+            var marker_959bf996f20f93f4586dba5880109f27 = L.marker(
+                [51.4496728960354, -0.0374153592115306],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_edcbf1abc0f743cb6c41a0f8ee912155 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45419e9f2781b7466777d1479db0ba18 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c3f0b43ba8efe5c6c564d32aa6bd9bd6 = $(`<div id="html_c3f0b43ba8efe5c6c564d32aa6bd9bd6" style="width: 100.0%; height: 100.0%;"><b>HP1</b> &mdash; Lewisham - Honor Oak Park<br>Tipo: Urban Background<br>Municipio: Lewisham</div>`)[0];
+                popup_45419e9f2781b7466777d1479db0ba18.setContent(html_c3f0b43ba8efe5c6c564d32aa6bd9bd6);
+            
+        
+
+        marker_959bf996f20f93f4586dba5880109f27.bindPopup(popup_45419e9f2781b7466777d1479db0ba18)
+        ;
+
+        
+    
+    
+            marker_959bf996f20f93f4586dba5880109f27.bindTooltip(
+                `<div>
+                     HP1 — Lewisham - Honor Oak Park (Urban Background)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_959bf996f20f93f4586dba5880109f27.setIcon(icon_edcbf1abc0f743cb6c41a0f8ee912155);
+            
+    
+            var marker_454c5c39c072363feabe75d4ee021252 = L.marker(
+                [51.476168, -0.230427],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_d387dd71b23cf58fa27179ed6592430a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_59bb0882b458f755e20ff93409584164 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b8a0abcd2bad02c8737c41e2529cc036 = $(`<div id="html_b8a0abcd2bad02c8737c41e2529cc036" style="width: 100.0%; height: 100.0%;"><b>RI2</b> &mdash; Richmond Upon Thames - Barnes Wetlands<br>Tipo: Suburban<br>Municipio: Richmond</div>`)[0];
+                popup_59bb0882b458f755e20ff93409584164.setContent(html_b8a0abcd2bad02c8737c41e2529cc036);
+            
+        
+
+        marker_454c5c39c072363feabe75d4ee021252.bindPopup(popup_59bb0882b458f755e20ff93409584164)
+        ;
+
+        
+    
+    
+            marker_454c5c39c072363feabe75d4ee021252.bindTooltip(
+                `<div>
+                     RI2 — Richmond Upon Thames - Barnes Wetlands (Suburban)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_454c5c39c072363feabe75d4ee021252.setIcon(icon_d387dd71b23cf58fa27179ed6592430a);
+            
+    
+            var marker_7ed833d3d5efe3a18015d1f1d51d2735 = L.marker(
+                [51.480189, -0.237335],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_fa80a33481b431bb9dd252b277b9239f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fbc136dcca98b8cb12bf6020020391f6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a5aad15caa615dda7c0fb7ed55f1d565 = $(`<div id="html_a5aad15caa615dda7c0fb7ed55f1d565" style="width: 100.0%; height: 100.0%;"><b>RI1</b> &mdash; Richmond Upon Thames - Castelnau<br>Tipo: Roadside<br>Municipio: Richmond</div>`)[0];
+                popup_fbc136dcca98b8cb12bf6020020391f6.setContent(html_a5aad15caa615dda7c0fb7ed55f1d565);
+            
+        
+
+        marker_7ed833d3d5efe3a18015d1f1d51d2735.bindPopup(popup_fbc136dcca98b8cb12bf6020020391f6)
+        ;
+
+        
+    
+    
+            marker_7ed833d3d5efe3a18015d1f1d51d2735.bindTooltip(
+                `<div>
+                     RI1 — Richmond Upon Thames - Castelnau (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7ed833d3d5efe3a18015d1f1d51d2735.setIcon(icon_fa80a33481b431bb9dd252b277b9239f);
+            
+    
+            var marker_01e865921be4f8d663347594dc89aef9 = L.marker(
+                [51.4804994936467, -0.0595528932573422],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_357a8fc29093b184c0b99f2b325b8bc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e4058c4b306b308b268b930dff96e0d2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4626cdc05c06d11bedba610a6aea66d1 = $(`<div id="html_4626cdc05c06d11bedba610a6aea66d1" style="width: 100.0%; height: 100.0%;"><b>SK5</b> &mdash; Southwark - A2 Old Kent Road<br>Tipo: Roadside<br>Municipio: Southwark</div>`)[0];
+                popup_e4058c4b306b308b268b930dff96e0d2.setContent(html_4626cdc05c06d11bedba610a6aea66d1);
+            
+        
+
+        marker_01e865921be4f8d663347594dc89aef9.bindPopup(popup_e4058c4b306b308b268b930dff96e0d2)
+        ;
+
+        
+    
+    
+            marker_01e865921be4f8d663347594dc89aef9.bindTooltip(
+                `<div>
+                     SK5 — Southwark - A2 Old Kent Road (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_01e865921be4f8d663347594dc89aef9.setIcon(icon_357a8fc29093b184c0b99f2b325b8bc4);
+            
+    
+            var marker_518935803336eeb176e29e289f741f79 = L.marker(
+                [51.5150461674013, -0.00841849265642741],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_0e1aac09a78acd3e855ce2edc9554c80 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25ba92756dc684151e3f78a8389fcc8e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0d999218e588e3fa422fbeafde67ae9b = $(`<div id="html_0d999218e588e3fa422fbeafde67ae9b" style="width: 100.0%; height: 100.0%;"><b>TH4</b> &mdash; Tower Hamlets - Blackwall<br>Tipo: Roadside<br>Municipio: Tower Hamlets</div>`)[0];
+                popup_25ba92756dc684151e3f78a8389fcc8e.setContent(html_0d999218e588e3fa422fbeafde67ae9b);
+            
+        
+
+        marker_518935803336eeb176e29e289f741f79.bindPopup(popup_25ba92756dc684151e3f78a8389fcc8e)
+        ;
+
+        
+    
+    
+            marker_518935803336eeb176e29e289f741f79.bindTooltip(
+                `<div>
+                     TH4 — Tower Hamlets - Blackwall (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_518935803336eeb176e29e289f741f79.setIcon(icon_0e1aac09a78acd3e855ce2edc9554c80);
+            
+    
+            var marker_c9719f0edad46772a640661dcf0f3a85 = L.marker(
+                [51.5225462561171, -0.0420823040635312],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_34043e4f6cc74fb2f8c8394111ab2795 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6cd44463649cc756e45ca08d33c8e03 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_16de68764aa6ecd9e1a0ac590b9b127d = $(`<div id="html_16de68764aa6ecd9e1a0ac590b9b127d" style="width: 100.0%; height: 100.0%;"><b>TH2</b> &mdash; Tower Hamlets - Mile End Road<br>Tipo: Roadside<br>Municipio: Tower Hamlets</div>`)[0];
+                popup_b6cd44463649cc756e45ca08d33c8e03.setContent(html_16de68764aa6ecd9e1a0ac590b9b127d);
+            
+        
+
+        marker_c9719f0edad46772a640661dcf0f3a85.bindPopup(popup_b6cd44463649cc756e45ca08d33c8e03)
+        ;
+
+        
+    
+    
+            marker_c9719f0edad46772a640661dcf0f3a85.bindTooltip(
+                `<div>
+                     TH2 — Tower Hamlets - Mile End Road (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9719f0edad46772a640661dcf0f3a85.setIcon(icon_34043e4f6cc74fb2f8c8394111ab2795);
+            
+    
+            var marker_ad82c4106a9c85906d5476c286c866d6 = L.marker(
+                [51.4794395281222, -0.141786953606306],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_587c80bb43d9ab424f0afa671b5807ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5727c36cfb673731aa7252f1c041dbed = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f237ccabecdc2ad1248404ee2819b34b = $(`<div id="html_f237ccabecdc2ad1248404ee2819b34b" style="width: 100.0%; height: 100.0%;"><b>WAA</b> &mdash; Wandsworth - Battersea<br>Tipo: Roadside<br>Municipio: Wandsworth</div>`)[0];
+                popup_5727c36cfb673731aa7252f1c041dbed.setContent(html_f237ccabecdc2ad1248404ee2819b34b);
+            
+        
+
+        marker_ad82c4106a9c85906d5476c286c866d6.bindPopup(popup_5727c36cfb673731aa7252f1c041dbed)
+        ;
+
+        
+    
+    
+            marker_ad82c4106a9c85906d5476c286c866d6.bindTooltip(
+                `<div>
+                     WAA — Wandsworth - Battersea (Roadside)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad82c4106a9c85906d5476c286c866d6.setIcon(icon_587c80bb43d9ab424f0afa671b5807ef);
+            
+    
+            var marker_d2b683066898eca3e8f3e0e2d4a9bbe5 = L.marker(
+                [51.494681, -0.131938],
+                {
+}
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
+        
+    
+            var icon_70b6a0a6fe1c6c0e626a46565c2f4ac1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_701414784b35360c0d6dc668f18b8d32 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9116ba2ff6bdddea4a8f3c467bf0f4b4 = $(`<div id="html_9116ba2ff6bdddea4a8f3c467bf0f4b4" style="width: 100.0%; height: 100.0%;"><b>WM0</b> &mdash; Westminster - Horseferry Road<br>Tipo: Urban Background<br>Municipio: Westminster</div>`)[0];
+                popup_701414784b35360c0d6dc668f18b8d32.setContent(html_9116ba2ff6bdddea4a8f3c467bf0f4b4);
+            
+        
+
+        marker_d2b683066898eca3e8f3e0e2d4a9bbe5.bindPopup(popup_701414784b35360c0d6dc668f18b8d32)
+        ;
+
+        
+    
+    
+            marker_d2b683066898eca3e8f3e0e2d4a9bbe5.bindTooltip(
+                `<div>
+                     WM0 — Westminster - Horseferry Road (Urban Background)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d2b683066898eca3e8f3e0e2d4a9bbe5.setIcon(icon_70b6a0a6fe1c6c0e626a46565c2f4ac1);
+            
+    
+            var marker_4f724a4ea745fc25db344c897f002503 = L.marker(
                 [51.52254, -0.15459],
                 {
 }
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
         
     
-            var icon_2e733bdd2178874758c9ffadd057a2ee = L.AwesomeMarkers.icon(
+            var icon_7ce9ef9b840d4ead4d42e62568735a86 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
-  "icon": "cloud",
+  "icon": "map-marker",
   "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_8f3e29c0ebb2e74af654145d31e1f2d0 = L.popup({
+        var popup_ff9a9301822abece33f10a28e538049c = L.popup({
   "maxWidth": 260,
 });
 
         
             
-                var html_b1e01a3e33f37c988027429f4057fad5 = $(`<div id="html_b1e01a3e33f37c988027429f4057fad5" style="width: 100.0%; height: 100.0%;"><b>MY1</b> &mdash; Westminster – Marylebone Rd<br>Tipo: Kerbside<br><b>NO₂ medio: 48.0 μg/m³</b></div>`)[0];
-                popup_8f3e29c0ebb2e74af654145d31e1f2d0.setContent(html_b1e01a3e33f37c988027429f4057fad5);
+                var html_0a9cce608568075c06beccede4b239c8 = $(`<div id="html_0a9cce608568075c06beccede4b239c8" style="width: 100.0%; height: 100.0%;"><b>MY1</b> &mdash; Westminster - Marylebone Road<br>Tipo: Kerbside<br>Municipio: Westminster</div>`)[0];
+                popup_ff9a9301822abece33f10a28e538049c.setContent(html_0a9cce608568075c06beccede4b239c8);
             
         
 
-        marker_a4d0d4bd6a15f414fb636776b5e21781.bindPopup(popup_8f3e29c0ebb2e74af654145d31e1f2d0)
+        marker_4f724a4ea745fc25db344c897f002503.bindPopup(popup_ff9a9301822abece33f10a28e538049c)
         ;
 
         
     
     
-            marker_a4d0d4bd6a15f414fb636776b5e21781.bindTooltip(
+            marker_4f724a4ea745fc25db344c897f002503.bindTooltip(
                 `<div>
-                     MY1 — 48.0 μg/m³
+                     MY1 — Westminster - Marylebone Road (Kerbside)
                  </div>`,
                 {
   "sticky": true,
@@ -143,95 +2160,47 @@
             );
         
     
-                marker_a4d0d4bd6a15f414fb636776b5e21781.setIcon(icon_2e733bdd2178874758c9ffadd057a2ee);
+                marker_4f724a4ea745fc25db344c897f002503.setIcon(icon_7ce9ef9b840d4ead4d42e62568735a86);
             
     
-            var marker_847039883726476a25733dc7e8b70d95 = L.marker(
-                [51.52105, -0.21349],
-                {
-}
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
-        
-    
-            var icon_2cb98531a53854025be36f87a1c5686b = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "cloud",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_b01fd372c1b891fc772e510d4d15349d = L.popup({
-  "maxWidth": 260,
-});
-
-        
-            
-                var html_534198a4a3fe162179aa222eb2d3121e = $(`<div id="html_534198a4a3fe162179aa222eb2d3121e" style="width: 100.0%; height: 100.0%;"><b>KC1</b> &mdash; Kensington – North Kensington<br>Tipo: Urban Background<br><b>NO₂ medio: 21.1 μg/m³</b></div>`)[0];
-                popup_b01fd372c1b891fc772e510d4d15349d.setContent(html_534198a4a3fe162179aa222eb2d3121e);
-            
-        
-
-        marker_847039883726476a25733dc7e8b70d95.bindPopup(popup_b01fd372c1b891fc772e510d4d15349d)
-        ;
-
-        
-    
-    
-            marker_847039883726476a25733dc7e8b70d95.bindTooltip(
-                `<div>
-                     KC1 — 21.1 μg/m³
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_847039883726476a25733dc7e8b70d95.setIcon(icon_2cb98531a53854025be36f87a1c5686b);
-            
-    
-            var marker_2b6eb1db158d3b1c3d02962ac049afb0 = L.marker(
+            var marker_4c253e9b48484616efbfa709746d9715 = L.marker(
                 [51.51393, -0.15279],
                 {
 }
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
         
     
-            var icon_2d6f3205afb9e3a843109d9fce9509bf = L.AwesomeMarkers.icon(
+            var icon_fd84319146406b4be372286230e2a80a = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
-  "icon": "cloud",
+  "icon": "map-marker",
   "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_5b68beebd60bfac8a3359dc319e6ae0d = L.popup({
+        var popup_1ecffdba083eb530878c9e30946e2636 = L.popup({
   "maxWidth": 260,
 });
 
         
             
-                var html_9b652fc2fcc1a1c8aed1ab5518d60614 = $(`<div id="html_9b652fc2fcc1a1c8aed1ab5518d60614" style="width: 100.0%; height: 100.0%;"><b>WM6</b> &mdash; Westminster – Oxford Street<br>Tipo: Kerbside<br><b>NO₂ medio: 40.2 μg/m³</b></div>`)[0];
-                popup_5b68beebd60bfac8a3359dc319e6ae0d.setContent(html_9b652fc2fcc1a1c8aed1ab5518d60614);
+                var html_b24d4f4a5558ba99d20692d7bc6f8b32 = $(`<div id="html_b24d4f4a5558ba99d20692d7bc6f8b32" style="width: 100.0%; height: 100.0%;"><b>WM6</b> &mdash; Westminster - Oxford Street<br>Tipo: Kerbside<br>Municipio: Westminster</div>`)[0];
+                popup_1ecffdba083eb530878c9e30946e2636.setContent(html_b24d4f4a5558ba99d20692d7bc6f8b32);
             
         
 
-        marker_2b6eb1db158d3b1c3d02962ac049afb0.bindPopup(popup_5b68beebd60bfac8a3359dc319e6ae0d)
+        marker_4c253e9b48484616efbfa709746d9715.bindPopup(popup_1ecffdba083eb530878c9e30946e2636)
         ;
 
         
     
     
-            marker_2b6eb1db158d3b1c3d02962ac049afb0.bindTooltip(
+            marker_4c253e9b48484616efbfa709746d9715.bindTooltip(
                 `<div>
-                     WM6 — 40.2 μg/m³
+                     WM6 — Westminster - Oxford Street (Kerbside)
                  </div>`,
                 {
   "sticky": true,
@@ -239,47 +2208,47 @@
             );
         
     
-                marker_2b6eb1db158d3b1c3d02962ac049afb0.setIcon(icon_2d6f3205afb9e3a843109d9fce9509bf);
+                marker_4c253e9b48484616efbfa709746d9715.setIcon(icon_fd84319146406b4be372286230e2a80a);
             
     
-            var marker_329ea075818de7fd5d296a52c87e1cb0 = L.marker(
+            var marker_369713ab6f07cfb918d4cb371d0ca0ed = L.marker(
                 [51.52185, -0.1274],
                 {
 }
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
+            ).addTo(map_4c3055c732f7f6290c03a0f95a673253);
         
     
-            var icon_91bef5af3d8d686190522981fcf10f05 = L.AwesomeMarkers.icon(
+            var icon_f257c67815b1e4904408d6c7d10bf354 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
+  "markerColor": "blue",
   "iconColor": "white",
-  "icon": "cloud",
+  "icon": "map-marker",
   "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_304715355a07926c6a6c320f94c959c6 = L.popup({
+        var popup_ea36058c2740f230208e3ef1c80141ba = L.popup({
   "maxWidth": 260,
 });
 
         
             
-                var html_53fa7161a64df38326fcb36db393ebad = $(`<div id="html_53fa7161a64df38326fcb36db393ebad" style="width: 100.0%; height: 100.0%;"><b>CT3</b> &mdash; City of London – Aldgate School<br>Tipo: Urban Background<br><b>NO₂ medio: 25.5 μg/m³</b></div>`)[0];
-                popup_304715355a07926c6a6c320f94c959c6.setContent(html_53fa7161a64df38326fcb36db393ebad);
+                var html_28e9d5a18a1e5987d2925d34daec268c = $(`<div id="html_28e9d5a18a1e5987d2925d34daec268c" style="width: 100.0%; height: 100.0%;"><b>CT3</b> &mdash; City of London - Aldgate School<br>Tipo: Urban Background<br>Municipio: City of London</div>`)[0];
+                popup_ea36058c2740f230208e3ef1c80141ba.setContent(html_28e9d5a18a1e5987d2925d34daec268c);
             
         
 
-        marker_329ea075818de7fd5d296a52c87e1cb0.bindPopup(popup_304715355a07926c6a6c320f94c959c6)
+        marker_369713ab6f07cfb918d4cb371d0ca0ed.bindPopup(popup_ea36058c2740f230208e3ef1c80141ba)
         ;
 
         
     
     
-            marker_329ea075818de7fd5d296a52c87e1cb0.bindTooltip(
+            marker_369713ab6f07cfb918d4cb371d0ca0ed.bindTooltip(
                 `<div>
-                     CT3 — 25.5 μg/m³
+                     CT3 — City of London - Aldgate School (Urban Background)
                  </div>`,
                 {
   "sticky": true,
@@ -287,295 +2256,7 @@
             );
         
     
-                marker_329ea075818de7fd5d296a52c87e1cb0.setIcon(icon_91bef5af3d8d686190522981fcf10f05);
-            
-    
-            var marker_3072a8cc5f10566cb1876c4ffd6bbf44 = L.marker(
-                [51.49386, 0.10612],
-                {
-}
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
-        
-    
-            var icon_0ad1054e0be1bebbdd5aad3e45dd02f5 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "cloud",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_34fa63a9ad93dad18df9a3486b2103fe = L.popup({
-  "maxWidth": 260,
-});
-
-        
-            
-                var html_07539179e40858e459b33f8df96f0434 = $(`<div id="html_07539179e40858e459b33f8df96f0434" style="width: 100.0%; height: 100.0%;"><b>BX1</b> &mdash; Bexley – Slade Green<br>Tipo: Suburban<br><b>NO₂ medio: 19.6 μg/m³</b></div>`)[0];
-                popup_34fa63a9ad93dad18df9a3486b2103fe.setContent(html_07539179e40858e459b33f8df96f0434);
-            
-        
-
-        marker_3072a8cc5f10566cb1876c4ffd6bbf44.bindPopup(popup_34fa63a9ad93dad18df9a3486b2103fe)
-        ;
-
-        
-    
-    
-            marker_3072a8cc5f10566cb1876c4ffd6bbf44.bindTooltip(
-                `<div>
-                     BX1 — 19.6 μg/m³
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_3072a8cc5f10566cb1876c4ffd6bbf44.setIcon(icon_0ad1054e0be1bebbdd5aad3e45dd02f5);
-            
-    
-            var marker_6d64e31c1905c7c1918c053ad18ed897 = L.marker(
-                [51.64504, -0.06618],
-                {
-}
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
-        
-    
-            var icon_747d4b14555ff48554ab801de948c90d = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "cloud",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_efe215bba30c0b0201f0ac5eb0451632 = L.popup({
-  "maxWidth": 260,
-});
-
-        
-            
-                var html_b6797af93196ff25861e85adc507d6b7 = $(`<div id="html_b6797af93196ff25861e85adc507d6b7" style="width: 100.0%; height: 100.0%;"><b>EN1</b> &mdash; Enfield – Bush Hill Park<br>Tipo: Suburban<br><b>NO₂ medio: 19.5 μg/m³</b></div>`)[0];
-                popup_efe215bba30c0b0201f0ac5eb0451632.setContent(html_b6797af93196ff25861e85adc507d6b7);
-            
-        
-
-        marker_6d64e31c1905c7c1918c053ad18ed897.bindPopup(popup_efe215bba30c0b0201f0ac5eb0451632)
-        ;
-
-        
-    
-    
-            marker_6d64e31c1905c7c1918c053ad18ed897.bindTooltip(
-                `<div>
-                     EN1 — 19.5 μg/m³
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_6d64e31c1905c7c1918c053ad18ed897.setIcon(icon_747d4b14555ff48554ab801de948c90d);
-            
-    
-            var marker_96c33179dc2dc4dd312c2f39c48debbd = L.marker(
-                [51.5993, -0.06822],
-                {
-}
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
-        
-    
-            var icon_1ae71308dfdcbaf1938b5932fe035c0b = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "cloud",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_9e7e8ca319ef9265322b7487140cb257 = L.popup({
-  "maxWidth": 260,
-});
-
-        
-            
-                var html_f16ad99c971d1b614e99feab510f96af = $(`<div id="html_f16ad99c971d1b614e99feab510f96af" style="width: 100.0%; height: 100.0%;"><b>HG1</b> &mdash; Haringey – Haringey Town Hall<br>Tipo: Roadside<br><b>NO₂ medio: 32.3 μg/m³</b></div>`)[0];
-                popup_9e7e8ca319ef9265322b7487140cb257.setContent(html_f16ad99c971d1b614e99feab510f96af);
-            
-        
-
-        marker_96c33179dc2dc4dd312c2f39c48debbd.bindPopup(popup_9e7e8ca319ef9265322b7487140cb257)
-        ;
-
-        
-    
-    
-            marker_96c33179dc2dc4dd312c2f39c48debbd.bindTooltip(
-                `<div>
-                     HG1 — 32.3 μg/m³
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_96c33179dc2dc4dd312c2f39c48debbd.setIcon(icon_1ae71308dfdcbaf1938b5932fe035c0b);
-            
-    
-            var marker_9636b52ef501778de58d67576678ad51 = L.marker(
-                [51.52255, -0.04208],
-                {
-}
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
-        
-    
-            var icon_2d072023af4e3853093bc1f526212939 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "cloud",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_fee21aca38462735cabf54f8110350f9 = L.popup({
-  "maxWidth": 260,
-});
-
-        
-            
-                var html_a662e6c6adb25cd6e1cf6929d7b153d2 = $(`<div id="html_a662e6c6adb25cd6e1cf6929d7b153d2" style="width: 100.0%; height: 100.0%;"><b>TH2</b> &mdash; Tower Hamlets – Mile End Road<br>Tipo: Roadside<br><b>NO₂ medio: 28.2 μg/m³</b></div>`)[0];
-                popup_fee21aca38462735cabf54f8110350f9.setContent(html_a662e6c6adb25cd6e1cf6929d7b153d2);
-            
-        
-
-        marker_9636b52ef501778de58d67576678ad51.bindPopup(popup_fee21aca38462735cabf54f8110350f9)
-        ;
-
-        
-    
-    
-            marker_9636b52ef501778de58d67576678ad51.bindTooltip(
-                `<div>
-                     TH2 — 28.2 μg/m³
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_9636b52ef501778de58d67576678ad51.setIcon(icon_2d072023af4e3853093bc1f526212939);
-            
-    
-            var marker_89e32f3b47da7e7352a6afb03d392833 = L.marker(
-                [51.57298, 0.17908],
-                {
-}
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
-        
-    
-            var icon_c58160152e304fe9f2cf1125e32eddc5 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "cloud",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_da46ebf3de93ab2b6a97330f4bcc5023 = L.popup({
-  "maxWidth": 260,
-});
-
-        
-            
-                var html_d7510d971646337b502f7de2816eb145 = $(`<div id="html_d7510d971646337b502f7de2816eb145" style="width: 100.0%; height: 100.0%;"><b>HV3</b> &mdash; Havering – Romford<br>Tipo: Roadside<br><b>NO₂ medio: 31.5 μg/m³</b></div>`)[0];
-                popup_da46ebf3de93ab2b6a97330f4bcc5023.setContent(html_d7510d971646337b502f7de2816eb145);
-            
-        
-
-        marker_89e32f3b47da7e7352a6afb03d392833.bindPopup(popup_da46ebf3de93ab2b6a97330f4bcc5023)
-        ;
-
-        
-    
-    
-            marker_89e32f3b47da7e7352a6afb03d392833.bindTooltip(
-                `<div>
-                     HV3 — 31.5 μg/m³
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_89e32f3b47da7e7352a6afb03d392833.setIcon(icon_c58160152e304fe9f2cf1125e32eddc5);
-            
-    
-            var marker_e52e6b7f8690722e37a4fb3f91eb60b5 = L.marker(
-                [51.49631, -0.46083],
-                {
-}
-            ).addTo(map_30e7b2e0a1d417a541871ea17a6b3480);
-        
-    
-            var icon_9d97a77df178c7da1c90141946838123 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "cloud",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_81ac780984d8037b9f308ca42adaebbd = L.popup({
-  "maxWidth": 260,
-});
-
-        
-            
-                var html_deeac721bce159d7f2614b38056a2157 = $(`<div id="html_deeac721bce159d7f2614b38056a2157" style="width: 100.0%; height: 100.0%;"><b>HI0</b> &mdash; Hillingdon – Keats Way<br>Tipo: Suburban<br><b>NO₂ medio: 30.9 μg/m³</b></div>`)[0];
-                popup_81ac780984d8037b9f308ca42adaebbd.setContent(html_deeac721bce159d7f2614b38056a2157);
-            
-        
-
-        marker_e52e6b7f8690722e37a4fb3f91eb60b5.bindPopup(popup_81ac780984d8037b9f308ca42adaebbd)
-        ;
-
-        
-    
-    
-            marker_e52e6b7f8690722e37a4fb3f91eb60b5.bindTooltip(
-                `<div>
-                     HI0 — 30.9 μg/m³
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_e52e6b7f8690722e37a4fb3f91eb60b5.setIcon(icon_9d97a77df178c7da1c90141946838123);
+                marker_369713ab6f07cfb918d4cb371d0ca0ed.setIcon(icon_f257c67815b1e4904408d6c7d10bf354);
             
 </script>
 </html>

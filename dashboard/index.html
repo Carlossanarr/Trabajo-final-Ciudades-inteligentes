@@ -67,8 +67,7 @@
 <div class="tab-bar">
   <button class="tab-btn active" onclick="showTab('eda',this)">1. EDA</button>
   <button class="tab-btn" onclick="showTab('no2',this)">2. Análisis NO₂</button>
-  <button class="tab-btn" onclick="showTab('modelo',this)">3. Modelo predictivo</button>
-  <button class="tab-btn" onclick="showTab('mapas',this)">4. Mapas</button>
+  <button class="tab-btn" onclick="showTab('mapas',this)">3. Mapas</button>
 </div>
 <div id="tab-eda" class="tab-content active">
   <p class="section-title">Análisis Exploratorio de los datos LAQN (NO₂, 2019-2022)</p>
@@ -87,21 +86,19 @@
   <div class="img-card"><img src="img/fig_no2_semanal.png"/><p>3.2 — NO₂ medio por día de la semana</p></div>
   <div class="img-card"><img src="img/fig_no2_mensual.png"/><p>3.3 — NO₂ medio por mes</p></div>
   <div class="img-card"><img src="img/fig_no2_anual.png"/><p>3.4 — NO₂ medio anual</p></div>
+  <div class="img-card"><img src="img/fig_estacionalidad.png"/><p>3.5 — Descomposición estacional por tipo</p></div>
+  <div class="img-card"><img src="img/fig_media_horaria_tipo.png"/><p>3.5 — Media horaria por tipo</p></div>
 </div>
 
-</div>
-<div id="tab-modelo" class="tab-content">
-  <p class="section-title">Predicción de NO₂ — Proceso Gaussiano (gpytorch)</p>
-  <div class="img-grid">  <div class="img-card">    <img src="img/fig_gp_no2.png"/>    <p>Prediccion GP de NO2 semanal (MY1, test 2022). 75% de muestras test dentro del IC ±1sigma.</p>  </div></div><table class="data-table">  <thead><tr><th>Split</th><th>R2</th><th>MAE (ug/m3)</th><th>RMSE (ug/m3)</th></tr></thead>  <tbody><tr><td>Train 2019-2021</td><td>0.796</td><td>5.02</td><td>6.43</td></tr><tr><td>Test 2022</td><td>0.106</td><td>6.82</td><td>8.85</td></tr></tbody></table><p style="margin-top:1rem;color:#555;font-size:.88rem">Modelo: <code>ExactGP</code> autoregresivo AR(k=5) sobre NO2 semanal de MY1.<br>Kernel: <code>ScaleKernel(LinearKernel + MaternKernel(5/2) + PeriodicKernel)</code> + ruido Gaussiano homocedástico (equivalente a WhiteKernel).<br>Features: 5 lags semanales + sin/cos de semana del ano (ciclo anual). Estandarizacion ajustada solo sobre el split de entrenamiento. El R2 en test se ve limitado por la ruptura estructural del NO2 en 2020-2021 (COVID).</p>
 </div>
 <div id="tab-mapas" class="tab-content">
   <p class="section-title">Representación geográfica</p>
   
 <div class="map-selector">
-  <button class="map-btn active" onclick="showMap('estaciones',this)">5.1 Estaciones LAQN</button>
-  <button class="map-btn"        onclick="showMap('cluster',this)">5.2 Cluster paradas</button>
-  <button class="map-btn"        onclick="showMap('h3',this)">5.3 Hexágonos H3</button>
-  <button class="map-btn"        onclick="showMap('grafo',this)">5.4 Grafo + HeatMap</button>
+  <button class="map-btn active" onclick="showMap('estaciones',this)">4.1 Estaciones LAQN</button>
+  <button class="map-btn"        onclick="showMap('cluster',this)">4.2 Cluster paradas</button>
+  <button class="map-btn"        onclick="showMap('h3',this)">4.3 Hexágonos H3</button>
+  <button class="map-btn"        onclick="showMap('grafo',this)">4.4 Grafo + HeatMap</button>
 </div>
 <div id="map-estaciones" class="map-frame active"><iframe src="maps/mapa_estaciones.html"></iframe></div>
 <div id="map-cluster"    class="map-frame"       ><iframe src="maps/mapa_cluster_paradas.html"></iframe></div>

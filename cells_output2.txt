@@ -1,0 +1,176 @@
+﻿================================================================================
+CELL 1 (type=markdown, id=m001)
+================================================================================
+## ├ìndice
+
+1. [Carga de datos](#1)
+2. [An├ílisis Exploratorio (EDA)](#2)
+   - 2.1 Visi├│n general de la calidad del aire
+   - 2.2 Valores nulos e imputaci├│n (con eliminaci├│n de 2023)
+   - 2.3 Distribuciones y outliers
+3. [An├ílisis de contaminaci├│n (NOÔéé)](#3)
+   - 3.1 Patr├│n horario (diario)
+   - 3.2 Patr├│n semanal
+   - 3.3 Patr├│n mensual
+   - 3.4 Tendencia anual
+4. [Modelo predictivo ÔÇö Selecci├│n del mejor regresor](#4)
+5. [Representaci├│n geogr├ífica](#5)
+   - 5.1 Mapa de las estaciones LAQN
+   - 5.2 MarkerCluster de paradas TfL
+   - 5.3 Cobertura por hex├ígonos H3
+   - 5.4 Grafo de transporte sobre HeatMap de NOÔéé
+6. [Dashboard interactivo](#6)
+
+---
+
+## Pregunta de investigaci├│n
+
+> **┬┐Cu├íl es la relaci├│n entre la infraestructura de transporte p├║blico y los niveles de contaminaci├│n del aire (NOÔéé) en Londres?**
+>
+> Buscamos identificar qu├® estaciones presentan simult├íneamente:
+>
+> - **mayor riesgo ambiental**, asociado a niveles elevados de NOÔéé;
+> - **menor cobertura de transporte p├║blico**, medida a partir de la proximidad y densidad de paradas TfL.
+
+La contaminaci├│n por NOÔéé afecta directamente a la salud y la sostenibilidad urbana, mientras que la cobertura del transporte p├║blico condiciona la dependencia del veh├¡culo privado. Estudiar ambos factores en conjunto permite identificar zonas vulnerables donde la planificaci├│n del transporte podr├¡a tener mayor impacto ambiental.
+
+Este trabajo cumple los requisitos del curso:
+
+- Usa una ciudad real y datos abiertos de Londres (RQ1).
+- Integra movilidad y sostenibilidad ambiental (RQ2).
+- Trabaja con series temporales, redes de transporte y representaci├│n geogr├ífica (RQ4 y RQ5).
+- Sus resultados se resumen en un dashboard interactivo (RQ3).
+
+================================================================================
+CELL 19 (type=code, id=4b21b01b)
+================================================================================
+DASH_BLOCKS = {'eda': '', 'no2': '', 'modelo': '', 'mapas': ''}
+
+DASH_TEMPLATE = """<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Movilidad y sostenibilidad en Londres</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f6fa;color:#2c3e50}
+  header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);color:#fff;
+         padding:2rem 2.5rem;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  header h1{font-size:1.6rem;margin-bottom:.3rem}
+  header p{opacity:.9;font-size:.9rem}
+  .tab-bar{display:flex;background:#fff;border-bottom:2px solid #e0e0e0;
+           padding:0 2rem;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .tab-btn{padding:1rem 1.4rem;border:none;background:none;cursor:pointer;
+           font-size:.95rem;color:#555;border-bottom:3px solid transparent;
+           transition:all .2s;font-weight:500}
+  .tab-btn:hover{color:#0f3460;background:#f0f4ff}
+  .tab-btn.active{color:#0f3460;border-bottom-color:#0f3460;font-weight:700}
+  .tab-content{display:none;padding:2rem 2.5rem}
+  .tab-content.active{display:block}
+  .img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:1.5rem;margin-top:1rem}
+  .img-card{background:#fff;border-radius:12px;padding:1rem;
+            box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  .img-card img{width:100%;border-radius:8px}
+  .img-card p{font-size:.82rem;color:#555;margin-top:.5rem;text-align:center}
+  .map-selector{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.2rem}
+  .map-btn{padding:.55rem 1.1rem;border:2px solid #0f3460;border-radius:20px;
+           background:#fff;cursor:pointer;font-size:.88rem;color:#0f3460;
+           font-weight:500;transition:all .2s}
+  .map-btn:hover,.map-btn.active{background:#0f3460;color:#fff}
+  .map-frame{display:none;border-radius:12px;overflow:hidden;
+             box-shadow:0 3px 12px rgba(0,0,0,.12)}
+  .map-frame.active{display:block}
+  .map-frame iframe{width:100%;height:580px;border:none}
+  .data-table{width:100%;border-collapse:collapse;background:#fff;
+              border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-top:1rem}
+  .data-table th{background:#0f3460;color:#fff;padding:.7rem 1rem;
+                 text-align:left;font-size:.85rem}
+  .data-table td{padding:.6rem 1rem;border-bottom:1px solid #f0f0f0;font-size:.85rem}
+  .data-table tr:last-child td{border-bottom:none}
+  .section-title{font-size:1.1rem;font-weight:700;color:#0f3460;margin-bottom:1rem}
+  .pending{background:#fff;border-radius:12px;padding:2rem;text-align:center;color:#999;
+           font-style:italic;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  .badge{display:inline-block;background:#e8f0fe;color:#0f3460;border-radius:6px;
+         padding:.2rem .6rem;font-size:.78rem;font-weight:600;margin:.1rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>Movilidad y sostenibilidad ambiental en Londres</h1>
+  <p>Trabajo final &middot; Ciudades Inteligentes &middot; Universidad Carlos III de Madrid &middot; 2025/2026</p>
+  <p style="margin-top:.35rem">
+    Emilio Hermosa Schiantarelli (100451150) &middot;
+    Carlos Sanchez Arroyo (100451282) &middot;
+    Rodrigo Valderrey Tarrero (100451271)
+  </p>
+  <p style="margin-top:.5rem">
+    <span class="badge">RQ1 Ciudad real</span>
+    <span class="badge">RQ2 Movilidad + Sostenibilidad</span>
+    <span class="badge">RQ3 Dashboard</span>
+    <span class="badge">RQ4 Series temporales + Grafo</span>
+    <span class="badge">RQ5 Mapas geogr├íficos</span>
+  </p>
+</header>
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="showTab('eda',this)">1. EDA</button>
+  <button class="tab-btn" onclick="showTab('no2',this)">2. An├ílisis NOÔéé</button>
+  <button class="tab-btn" onclick="showTab('modelo',this)">3. Modelo predictivo</button>
+  <button class="tab-btn" onclick="showTab('mapas',this)">4. Mapas</button>
+</div>
+<div id="tab-eda" class="tab-content active">
+  <p class="section-title">An├ílisis Exploratorio de los datos LAQN (NOÔéé, 2019-2022)</p>
+  __EDA__
+</div>
+<div id="tab-no2" class="tab-content">
+  <p class="section-title">Patrones temporales de NOÔéé por estaci├│n</p>
+  __NO2__
+</div>
+<div id="tab-modelo" class="tab-content">
+  <p class="section-title">Predicci├│n de NOÔéé ÔÇö Proceso Gaussiano (gpytorch)</p>
+  __MODELO__
+</div>
+<div id="tab-mapas" class="tab-content">
+  <p class="section-title">Representaci├│n geogr├ífica</p>
+  __MAPAS__
+</div>
+<script>
+function showTab(name, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+function showMap(name, btn) {
+  document.querySelectorAll('.map-frame').forEach(f => f.classList.remove('active'));
+  document.querySelectorAll('.map-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('map-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
+"""
+
+PENDING = '<div class="pending">Secci├│n pendiente de generar ÔÇö ejecuta las celdas correspondientes.</div>'
+
+def render_dashboard():
+    html = DASH_TEMPLATE
+    html = html.replace('__EDA__',    DASH_BLOCKS['eda']    or PENDING)
+    html = html.replace('__NO2__',    DASH_BLOCKS['no2']    or PENDING)
+    html = html.replace('__MODELO__', DASH_BLOCKS['modelo'] or PENDING)
+    html = html.replace('__MAPAS__',  DASH_BLOCKS['mapas']  or PENDING)
+    out = f'{DASH_DIR}/index.html'
+    with open(out, 'w', encoding='utf-8') as f:
+        f.write(html)
+    return out
+
+DASH_BLOCKS['eda'] = """
+<div class="img-grid">
+  <div class="img-card"><img src="img/fig_nulos_no2.png"/><p>Calidad de los datos: nulos por estaci├│n y a├▒o</p></div>
+  <div class="img-card"><img src="img/fig_distribuciones.png"/><p>Distribuci├│n de NOÔéé por estaci├│n con umbral OMS (40 ╬╝g/m┬│)</p></div>
+</div>
+"""
+
+print('Dashboard inicializado en', render_dashboard())
+
