@@ -7,9 +7,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&display=swap" rel="stylesheet"/>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Exo 2','Segoe UI',Arial,sans-serif;background:#f0f4ff;color:#2c3e50}
+  body{
+    font-family:'Exo 2','Segoe UI',Arial,sans-serif;color:#2c3e50;
+    background-image:url('img/London.jpg');
+    background-size:cover;background-attachment:fixed;background-position:center center;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:rgba(240,244,255,0.50);
+  }
   header{
-    position:relative;overflow:hidden;
+    position:relative;overflow:hidden;z-index:1;
     background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);
     color:#fff;padding:2rem 2.5rem;
     box-shadow:0 4px 20px rgba(0,0,0,.35);
@@ -40,6 +48,10 @@
     backdrop-filter:blur(10px);box-shadow:0 2px 10px rgba(15,52,96,.08);
     position:sticky;top:0;z-index:100;
   }
+  .tab-content,.sub-panel,.img-card,.section-desc,.map-frame,
+  .data-table,.pending{
+    position:relative;z-index:1;
+  }
   .tab-btn{
     padding:1rem 1.4rem;border:none;background:none;cursor:pointer;
     font-size:.95rem;color:#555;font-family:inherit;
@@ -66,7 +78,7 @@
     transition:transform .2s;
   }
   .sub-panel img:hover{transform:scale(1.01)}
-  .sub-panel p{font-size:.82rem;color:#555;text-align:center;margin-top:.5rem}
+  .sub-panel p,.nulos-stack p,.img-card p{display:none}
   .nulos-stack img{max-height:36vh;max-width:95%;display:block;margin:0 auto .8rem;}
   .nulos-stack p{font-size:.82rem;color:#555;text-align:center;margin-bottom:.8rem}
   .img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:1.4rem;margin-top:.5rem}
@@ -209,6 +221,7 @@
   <button class="map-btn"        onclick="showMap('grafo',this)">Grafo + HeatMap NO2</button>
   <button class="map-btn"        onclick="showMap('bus',this)">Rutas de Bus (Top 25)</button>
   <button class="map-btn"        onclick="showMap('metro',this)">Rutas de Metro</button>
+  <button class="map-btn"        onclick="showMap('agente-eco',this)">🌿 Ruta Agente ECO</button>
 </div>
 <div id="map-estaciones" class="map-frame active" data-src="maps/mapa_estaciones.html">
   <iframe src="maps/mapa_estaciones.html"></iframe>
@@ -226,6 +239,9 @@
   <iframe></iframe>
 </div>
 <div id="map-metro" class="map-frame" data-src="maps/mapa_metro_rutas.html">
+  <iframe></iframe>
+</div>
+<div id="map-agente-eco" class="map-frame" data-src="maps/mapa_agente_eco.html">
   <iframe></iframe>
 </div>
 
