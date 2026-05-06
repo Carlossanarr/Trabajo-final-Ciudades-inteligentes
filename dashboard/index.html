@@ -4,106 +4,230 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Movilidad y sostenibilidad en Londres</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&display=swap" rel="stylesheet"/>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f6fa;color:#2c3e50}
-  header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);color:#fff;
-         padding:2rem 2.5rem;box-shadow:0 2px 8px rgba(0,0,0,.3)}
-  header h1{font-size:1.6rem;margin-bottom:.3rem}
-  header p{opacity:.9;font-size:.9rem}
-  .tab-bar{display:flex;background:#fff;border-bottom:2px solid #e0e0e0;
-           padding:0 2rem;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-  .tab-btn{padding:1rem 1.4rem;border:none;background:none;cursor:pointer;
-           font-size:.95rem;color:#555;border-bottom:3px solid transparent;
-           transition:all .2s;font-weight:500}
+  body{font-family:'Exo 2','Segoe UI',Arial,sans-serif;background:#f0f4ff;color:#2c3e50}
+  header{
+    position:relative;overflow:hidden;
+    background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);
+    color:#fff;padding:2rem 2.5rem;
+    box-shadow:0 4px 20px rgba(0,0,0,.35);
+    border-bottom:1px solid rgba(100,160,255,0.2);
+  }
+  header::before{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(ellipse 120% 180% at 0% 50%,rgba(99,179,255,0.10) 0%,transparent 60%),
+      radial-gradient(ellipse 80% 120% at 100% 0%,rgba(59,130,246,0.08) 0%,transparent 50%);
+  }
+  header::after{
+    content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent,#3b82f6,#60a5fa,#3b82f6,transparent);
+    animation:glow-line 3s linear infinite;
+  }
+  @keyframes glow-line{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
+  header h1{
+    font-size:1.7rem;font-weight:900;letter-spacing:.03em;
+    background:linear-gradient(90deg,#ffffff 0%,#bfdbfe 60%,#93c5fd 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    background-clip:text;margin-bottom:.3rem;
+  }
+  header p{opacity:.85;font-size:.88rem;color:#bfdbfe}
+  .tab-bar{
+    display:flex;background:rgba(255,255,255,0.97);
+    border-bottom:2px solid #e0e7f0;padding:0 2rem;
+    backdrop-filter:blur(10px);box-shadow:0 2px 10px rgba(15,52,96,.08);
+    position:sticky;top:0;z-index:100;
+  }
+  .tab-btn{
+    padding:1rem 1.4rem;border:none;background:none;cursor:pointer;
+    font-size:.95rem;color:#555;font-family:inherit;
+    border-bottom:3px solid transparent;transition:all .2s;font-weight:600;
+  }
   .tab-btn:hover{color:#0f3460;background:#f0f4ff}
   .tab-btn.active{color:#0f3460;border-bottom-color:#0f3460;font-weight:700}
-  .tab-content{display:none;padding:2rem 2.5rem}
+  .tab-content{display:none;padding:1.5rem 2rem}
   .tab-content.active{display:block}
-  .img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:1.5rem;margin-top:1rem}
-  .img-card{background:#fff;border-radius:12px;padding:1rem;
-            box-shadow:0 2px 8px rgba(0,0,0,.07)}
-  .img-card img{width:100%;border-radius:8px}
+  .section-title{font-size:1.05rem;font-weight:700;color:#0f3460;margin-bottom:1rem}
+  .sub-nav{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
+  .sub-btn{
+    padding:.45rem .95rem;border:2px solid #0f3460;border-radius:18px;
+    background:#fff;cursor:pointer;font-size:.84rem;color:#0f3460;
+    font-family:inherit;font-weight:600;transition:all .2s;
+  }
+  .sub-btn:hover,.sub-btn.active{background:#0f3460;color:#fff}
+  .sub-panel{display:none}
+  .sub-panel.active{display:block}
+  .sub-panel img{
+    max-width:92%;max-height:72vh;width:auto;height:auto;
+    display:block;margin:0 auto;border-radius:10px;
+    box-shadow:0 4px 16px rgba(15,52,96,.12);
+    transition:transform .2s;
+  }
+  .sub-panel img:hover{transform:scale(1.01)}
+  .sub-panel p{font-size:.82rem;color:#555;text-align:center;margin-top:.5rem}
+  .nulos-stack img{max-height:36vh;max-width:95%;display:block;margin:0 auto .8rem;}
+  .nulos-stack p{font-size:.82rem;color:#555;text-align:center;margin-bottom:.8rem}
+  .img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:1.4rem;margin-top:.5rem}
+  .img-card{
+    background:#fff;border-radius:12px;padding:1rem;
+    box-shadow:0 2px 10px rgba(15,52,96,.08);
+    transition:transform .2s,box-shadow .2s;
+  }
+  .img-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(15,52,96,.13)}
+  .img-card img{width:100%;border-radius:8px;display:block}
   .img-card p{font-size:.82rem;color:#555;margin-top:.5rem;text-align:center}
-  .map-selector{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.2rem}
-  .map-btn{padding:.55rem 1.1rem;border:2px solid #0f3460;border-radius:20px;
-           background:#fff;cursor:pointer;font-size:.88rem;color:#0f3460;
-           font-weight:500;transition:all .2s}
+  .section-desc{
+    background:#eef3ff;border-left:3px solid #0f3460;
+    border-radius:6px;padding:.8rem 1.1rem;margin-bottom:1rem;
+    font-size:.9rem;color:#2c3e50;line-height:1.6;
+  }
+  .section-desc b{color:#0f3460}
+  .map-selector{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:1.1rem}
+  .map-btn{
+    padding:.5rem 1rem;border:2px solid #0f3460;border-radius:20px;
+    background:#fff;cursor:pointer;font-size:.86rem;color:#0f3460;
+    font-family:inherit;font-weight:600;transition:all .2s;
+  }
   .map-btn:hover,.map-btn.active{background:#0f3460;color:#fff}
-  .map-frame{display:none;border-radius:12px;overflow:hidden;
-             box-shadow:0 3px 12px rgba(0,0,0,.12)}
+  .map-frame{display:none;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(15,52,96,.15)}
   .map-frame.active{display:block}
-  .map-frame iframe{width:100%;height:580px;border:none}
-  .data-table{width:100%;border-collapse:collapse;background:#fff;
-              border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-top:1rem}
-  .data-table th{background:#0f3460;color:#fff;padding:.7rem 1rem;
-                 text-align:left;font-size:.85rem}
-  .data-table td{padding:.6rem 1rem;border-bottom:1px solid #f0f0f0;font-size:.85rem}
+  .map-frame iframe{width:100%;height:600px;border:none}
+  #map-grafo iframe{height:700px}
+  .data-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;
+              overflow:hidden;box-shadow:0 2px 8px rgba(15,52,96,.08);margin-top:1rem}
+  .data-table th{background:#0f3460;color:#fff;padding:.7rem 1rem;text-align:left;font-size:.85rem;font-weight:700}
+  .data-table td{padding:.6rem 1rem;border-bottom:1px solid #f0f0f0;font-size:.84rem}
   .data-table tr:last-child td{border-bottom:none}
-  .section-title{font-size:1.1rem;font-weight:700;color:#0f3460;margin-bottom:1rem}
-  .pending{background:#fff;border-radius:12px;padding:2rem;text-align:center;color:#999;
-           font-style:italic;box-shadow:0 2px 8px rgba(0,0,0,.07)}
-  .badge{display:inline-block;background:#e8f0fe;color:#0f3460;border-radius:6px;
-         padding:.2rem .6rem;font-size:.78rem;font-weight:600;margin:.1rem}
+  .data-table tr:hover td{background:#f5f8ff}
+  .pending{background:#fff;border-radius:12px;padding:2rem;text-align:center;
+           color:#999;font-style:italic;box-shadow:0 2px 8px rgba(15,52,96,.07)}
 </style>
 </head>
 <body>
 <header>
   <h1>Movilidad y sostenibilidad ambiental en Londres</h1>
   <p>Trabajo final &middot; Ciudades Inteligentes &middot; Universidad Carlos III de Madrid &middot; 2025/2026</p>
-  <p style="margin-top:.35rem">
+  <p style="margin-top:.35rem;color:#bfdbfe">
     Emilio Hermosa Schiantarelli (100451150) &middot;
     Carlos Sanchez Arroyo (100451282) &middot;
     Rodrigo Valderrey Tarrero (100451271)
   </p>
-  <p style="margin-top:.5rem">
-    <span class="badge">RQ1 Ciudad real</span>
-    <span class="badge">RQ2 Movilidad + Sostenibilidad</span>
-    <span class="badge">RQ3 Dashboard</span>
-    <span class="badge">RQ4 Series temporales + Grafo</span>
-    <span class="badge">RQ5 Mapas geográficos</span>
-  </p>
 </header>
 <div class="tab-bar">
-  <button class="tab-btn active" onclick="showTab('eda',this)">1. EDA</button>
-  <button class="tab-btn" onclick="showTab('no2',this)">2. Análisis NO₂</button>
-  <button class="tab-btn" onclick="showTab('mapas',this)">3. Mapas</button>
+  <button class="tab-btn active" onclick="showTab('eda',this)">EDA</button>
+  <button class="tab-btn" onclick="showTab('no2',this)">An&aacute;lisis NO2</button>
+  <button class="tab-btn" onclick="showTab('prediccion',this)">Predicci&oacute;n</button>
+  <button class="tab-btn" onclick="showTab('mapas',this)">Mapas</button>
 </div>
 <div id="tab-eda" class="tab-content active">
-  <p class="section-title">Análisis Exploratorio de los datos LAQN (NO₂, 2019-2022)</p>
+  <p class="section-title">An&aacute;lisis Exploratorio de los datos LAQN (NO2, 2019-2022)</p>
   
-<div class="img-grid">
-  <div class="img-card"><img src="img/fig_nulos_no2.png"/><p>Calidad de los datos: nulos por estación y año</p></div>
-  <div class="img-card"><img src="img/fig_distribuciones.png"/><p>Distribución de NO₂ por estación con umbral OMS (40 μg/m³)</p></div>
+<div class="sub-nav">
+  <button class="sub-btn active" onclick="showSub('tab-eda','eda-nulos',this)">Datos nulos</button>
+  <button class="sub-btn" onclick="showSub('tab-eda','eda-dist',this)">Distribuci&oacute;n NO2</button>
+</div>
+<div id="eda-nulos" class="sub-panel active">
+  <div class="nulos-stack">
+    <img src="img/fig_nulos_no2_full.png"/>
+    <p>% nulos por estaci&oacute;n y a&ntilde;o &mdash; periodo completo (2019-2023)</p>
+    <img src="img/fig_nulos_no2.png"/>
+    <p>% nulos tras filtrado &mdash; estaciones conservadas (2019-2022)</p>
+  </div>
+</div>
+<div id="eda-dist" class="sub-panel">
+  <img src="img/fig_distribuciones.png"/>
+  <p>Distribuci&oacute;n de NO2 por estaci&oacute;n con umbral OMS (40 &mu;g/m&sup3;)</p>
 </div>
 
 </div>
 <div id="tab-no2" class="tab-content">
-  <p class="section-title">Patrones temporales de NO₂ por estación</p>
+  <p class="section-title">Patrones temporales de NO2 por estaci&oacute;n</p>
   
-<div class="img-grid">
-  <div class="img-card"><img src="img/fig_no2_diario.png"/><p>3.1 — NO₂ medio por hora del día</p></div>
-  <div class="img-card"><img src="img/fig_no2_semanal.png"/><p>3.2 — NO₂ medio por día de la semana</p></div>
-  <div class="img-card"><img src="img/fig_no2_mensual.png"/><p>3.3 — NO₂ medio por mes</p></div>
-  <div class="img-card"><img src="img/fig_no2_anual.png"/><p>3.4 — NO₂ medio anual</p></div>
-  <div class="img-card"><img src="img/fig_estacionalidad.png"/><p>3.5 — Descomposición estacional por tipo</p></div>
-  <div class="img-card"><img src="img/fig_media_horaria_tipo.png"/><p>3.5 — Media horaria por tipo</p></div>
+<div class="sub-nav">
+  <button class="sub-btn active" onclick="showSub('tab-no2','no2-horario',this)">Patr&oacute;n horario</button>
+  <button class="sub-btn" onclick="showSub('tab-no2','no2-semanal',this)">Patr&oacute;n semanal</button>
+  <button class="sub-btn" onclick="showSub('tab-no2','no2-mensual',this)">Patr&oacute;n mensual</button>
+  <button class="sub-btn" onclick="showSub('tab-no2','no2-anual',this)">Tendencia anual</button>
+  <button class="sub-btn" onclick="showSub('tab-no2','no2-estac',this)">Estacionalidad</button>
+</div>
+<div id="no2-horario" class="sub-panel active">
+  <img src="img/fig_no2_diario.png"/>
+  <p>NO2 medio por hora del d&iacute;a (2019-2022)</p>
+</div>
+<div id="no2-semanal" class="sub-panel">
+  <img src="img/fig_no2_semanal.png"/>
+  <p>NO2 medio por d&iacute;a de la semana (2019-2022)</p>
+</div>
+<div id="no2-mensual" class="sub-panel">
+  <img src="img/fig_no2_mensual.png"/>
+  <p>NO2 medio por mes (2019-2022)</p>
+</div>
+<div id="no2-anual" class="sub-panel">
+  <img src="img/fig_no2_anual.png"/>
+  <p>NO2 medio anual (2019-2022)</p>
+</div>
+<div id="no2-estac" class="sub-panel">
+  <img src="img/fig_estacionalidad.png"/>
+  <p>Descomposici&oacute;n estacional por tipo de estaci&oacute;n</p>
+</div>
+
+</div>
+<div id="tab-prediccion" class="tab-content">
+  <p class="section-title">Modelo predictivo de contaminaci&oacute;n (Estaci&oacute;n MY1)</p>
+  
+<div class="section-desc">
+  <p>Modelo <b>Random Forest</b> (100 estimadores) &mdash; clasifica si el NO2 en MY1 (Marylebone Road) <b>sube</b>, <b>baja</b> o se <b>mantiene estable</b> la pr&oacute;xima semana. Divisi&oacute;n temporal 70/15/15.</p>
+</div>
+<div class="sub-nav">
+  <button class="sub-btn active" onclick="showSub('tab-prediccion','pred-reporte',this)">Reporte de clasificaci&oacute;n</button>
+  <button class="sub-btn" onclick="showSub('tab-prediccion','pred-confusion',this)">Matriz de confusi&oacute;n</button>
+  <button class="sub-btn" onclick="showSub('tab-prediccion','pred-features',this)">Importancia de variables</button>
+</div>
+<div id="pred-reporte" class="sub-panel active">
+  <img src="img/fig_classification_report.png"/>
+  <p>Reporte de clasificaci&oacute;n &mdash; conjunto de test</p>
+</div>
+<div id="pred-confusion" class="sub-panel">
+  <img src="img/fig_confusion_matrix.png"/>
+  <p>Matriz de confusi&oacute;n &mdash; Test</p>
+</div>
+<div id="pred-features" class="sub-panel">
+  <img src="img/fig_feature_importance.png"/>
+  <p>Importancia de variables &mdash; Random Forest</p>
 </div>
 
 </div>
 <div id="tab-mapas" class="tab-content">
-  <p class="section-title">Representación geográfica</p>
+  <p class="section-title">Representaci&oacute;n geogr&aacute;fica</p>
   
 <div class="map-selector">
-  <button class="map-btn active" onclick="showMap('estaciones',this)">4.1 Estaciones LAQN</button>
-  <button class="map-btn"        onclick="showMap('cluster',this)">4.2 Cluster paradas</button>
-  <button class="map-btn"        onclick="showMap('h3',this)">4.3 Hexágonos H3</button>
-  <button class="map-btn"        onclick="showMap('grafo',this)">4.4 Grafo + HeatMap NO2</button>
+  <button class="map-btn active" onclick="showMap('estaciones',this)">Estaciones LAQN</button>
+  <button class="map-btn"        onclick="showMap('cluster',this)">Cluster paradas</button>
+  <button class="map-btn"        onclick="showMap('h3',this)">Hex&aacute;gonos H3</button>
+  <button class="map-btn"        onclick="showMap('grafo',this)">Grafo + HeatMap NO2</button>
+  <button class="map-btn"        onclick="showMap('bus',this)">Rutas de Bus (Top 25)</button>
+  <button class="map-btn"        onclick="showMap('metro',this)">Rutas de Metro</button>
 </div>
-<div id="map-estaciones" class="map-frame active"><iframe src="maps/mapa_estaciones.html"></iframe></div>
-<div id="map-cluster"    class="map-frame"       ><iframe src="maps/mapa_cluster_paradas.html"></iframe></div>
-<div id="map-h3"         class="map-frame"       ><iframe src="maps/mapa_h3.html"></iframe></div>
-<div id="map-grafo"      class="map-frame"       ><iframe src="maps/mapa_grafo.html"></iframe></div>
+<div id="map-estaciones" class="map-frame active" data-src="maps/mapa_estaciones.html">
+  <iframe src="maps/mapa_estaciones.html"></iframe>
+</div>
+<div id="map-cluster" class="map-frame" data-src="maps/mapa_cluster_paradas.html">
+  <iframe></iframe>
+</div>
+<div id="map-h3" class="map-frame" data-src="maps/mapa_h3.html">
+  <iframe></iframe>
+</div>
+<div id="map-grafo" class="map-frame" data-src="maps/mapa_grafo.html">
+  <iframe></iframe>
+</div>
+<div id="map-bus" class="map-frame" data-src="maps/mapa_bus_rutas.html">
+  <iframe></iframe>
+</div>
+<div id="map-metro" class="map-frame" data-src="maps/mapa_metro_rutas.html">
+  <iframe></iframe>
+</div>
 
 </div>
 <script>
@@ -116,7 +240,22 @@ function showTab(name, btn) {
 function showMap(name, btn) {
   document.querySelectorAll('.map-frame').forEach(f => f.classList.remove('active'));
   document.querySelectorAll('.map-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('map-' + name).classList.add('active');
+  var frame = document.getElementById('map-' + name);
+  frame.classList.add('active');
+  btn.classList.add('active');
+  // Lazy-load: set iframe src only when first shown so Leaflet inits with correct size
+  var iframe = frame.querySelector('iframe');
+  if (iframe) {
+    var src = frame.getAttribute('data-src');
+    if (src && iframe.getAttribute('src') !== src) {
+      iframe.setAttribute('src', src);
+    }
+  }
+}
+function showSub(group, name, btn) {
+  document.querySelectorAll('#' + group + ' .sub-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('#' + group + ' .sub-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(name).classList.add('active');
   btn.classList.add('active');
 }
 </script>
